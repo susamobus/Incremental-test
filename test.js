@@ -1,3 +1,3 @@
 function test() {
-    document.getElementById("sus").innerHTML = 0
+    document.getElementById("sus").innerHTML = 5
 }
