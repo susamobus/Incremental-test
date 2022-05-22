@@ -1,3 +1,3 @@
 function test() {
-    document.getElementById("sus").style = "color: green" 
+    document.getElementById("sus").innerHTML = "sadgubhrfweujbhwfev" 
 }
