@@ -6,7 +6,7 @@ function amogus() {
 setInterval(function(){
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-},1)
+},50)
 setInterval(function(){
     var sus = sus+(1*amogus)
-},5)
+}, 500)
