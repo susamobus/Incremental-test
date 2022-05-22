@@ -1,8 +1,11 @@
 .SusButton {
     background-color: black;
-    height: 50px;
-    width: 120px
+    padding: 10px;
+    border-radius: 15px;
+    height: 100px;
+    width: 125px;
 }
 .SusText {
-    color: red
+    color: red;
+    font-size: 20px;
 }
