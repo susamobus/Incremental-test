@@ -1,12 +1,12 @@
 var amogus = 0
 var sus = 0
 function amogus() {
-    amogus = amogus+1
+    var amogus = amogus+1
 };
 setInterval(function(){
-    document.getElementById("sus").innerHTML = sus
-    document.getElementById("amogus").innerHTML = amogus
+    document.getElementById("sus").innerHTML = toString(sus)
+    document.getElementById("amogus").innerHTML = toString(amogus)
 },1)
 setInterval(function(){
-    sus = sus+(1*amogus)
+    var sus = sus+(1*amogus)
 },5)
