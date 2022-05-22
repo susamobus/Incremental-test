@@ -1,5 +1,7 @@
-
+var amogus = "test"
 function amogus() {
-    var amogus = "test5"
-    document.getElementById("sus").innerHTML = amogus
+    amogus = "test5"
 };
+setInterval(function(){
+    document.getElementById("sus").innerHTML = amogus
+},50)
