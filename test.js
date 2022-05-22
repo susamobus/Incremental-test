@@ -1,3 +1,7 @@
+var amogus = "sus"
 function amogus() {
-    document.getElementById("sus").innerHTML = "sadgubhrfweujbhwfev" 
+    amogus = "test"
 }
+window.setInterval(function() {
+    document.getElementById("sus").innerHTML = sus
+})
