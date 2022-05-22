@@ -1,7 +1,5 @@
-var amogus = "sus";
+
 function amogus() {
-    amogus = "test"
+    var amogus = "test"
+    document.getElementById("sus").innerText = amogus
 };
-window.setInterval(function() {
-    document.getElementById("sus").innerHTML = amogus
-}, 50);
