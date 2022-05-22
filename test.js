@@ -4,4 +4,4 @@ function amogus() {
 }
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
-})
+}, 50);
