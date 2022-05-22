@@ -1,3 +1,4 @@
+var sus = "sus"
 function test() {
-    print("test")
+    sus = "amogus"
 }
