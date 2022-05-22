@@ -1,5 +1,4 @@
-var sus = "sus"
 function test() {
-    sus = "amogus"
+    var sus = "amogus"
     document.getElementById("sus").innerHTML = sus
 }
