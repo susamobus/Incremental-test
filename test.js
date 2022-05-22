@@ -4,8 +4,8 @@ function amogus() {
     var amogus = amogus+1
 };
 setInterval(function(){
-    document.getElementById("sus").innerHTML = toString(sus)
-    document.getElementById("amogus").innerHTML = toString(amogus)
+    document.getElementById("sus").innerHTML = sus
+    document.getElementById("amogus").innerHTML = amogus
 },1)
 setInterval(function(){
     var sus = sus+(1*amogus)
