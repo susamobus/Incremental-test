@@ -1,3 +1,4 @@
 function test() {
-    document.getElementById("sus").innerHTML = 5
+    var sus = "test"
+    document.getElementById("sus").innerHTML = sus
 }
