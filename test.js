@@ -1,5 +1,5 @@
 var number = 0
-setInterval(function() {
+window.setInterval(function() {
     number =+ 1
 }, 50);
 function Amogus() {  
