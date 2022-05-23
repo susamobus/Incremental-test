@@ -1,7 +1,7 @@
 var number = 0
 window.setInterval(function() {
     number =+ 1
-}, 50);
+}, 1);
 function Amogus() {  
     document.getElementById("Sus").innerHTML = number
 };
