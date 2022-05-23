@@ -1,7 +1,7 @@
 var sus = 0
 var amogus = 0;
 window.setInterval(function() {
-    sus = sus + 0.1 * amogus
+    sus = Math.floor(sus + 0.1 * amogus)
 }, 250);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
