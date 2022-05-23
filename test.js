@@ -9,8 +9,7 @@ window.setInterval(function() {
     Save()
 },50);
 function Amogus() {  
-    amogus = amogus + 1
-};
+    amogus = amogus+floor((((sus-1)x5)+100)*sus
 function Save() {
     var save = {
         Sus: sus,
@@ -19,5 +18,4 @@ function Save() {
     localStorage.setItem("save",JSON.stringify(save));
 }
 function Load() {
-    var savegame = JSON.parse(localStorage.getItem("save"))
-}
+    var savegame = JSON.parse(localStorage.getItem("save"))}
