@@ -9,8 +9,4 @@ window.setInterval(function() {
 },50)
 function Amogus() {  
     amogus = amogus + 1
-};
-//setInterval(function(){
-//    document.getElementById("sus").innerHTML = sus
-//    document.getElementById("amogus").innerHTML = amogus
-//},50)
+}
