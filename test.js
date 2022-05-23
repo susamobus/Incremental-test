@@ -1,6 +1,6 @@
 var number = 0
 window.setInterval(function() {
-    number =+ 1
+    number = number + 1
 }, 1);
 function Amogus() {  
     document.getElementById("Sus").innerHTML = number
