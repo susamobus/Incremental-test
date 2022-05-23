@@ -2,7 +2,7 @@ var amogus = 0
 var sus = 0
 function amogus() {
     
-    document.getElementById("amogus").innerHTML = amogus
+    document.getElementById("amogus").innerHTML = toString(amogus)
 };
 //setInterval(function(){
 //    document.getElementById("sus").innerHTML = sus
