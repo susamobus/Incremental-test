@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .SusButton {
     background-color: black;
@@ -11,9 +11,5 @@ body {
 }
 .SusText {
     color: red;
-    font-size: 20px;
-}
-.AmogusText {
-    color: darkred;
     font-size: 20px;
 }
