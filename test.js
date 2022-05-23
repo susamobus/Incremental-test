@@ -1,6 +1,6 @@
 
-function amogus() {  
-    document.getElementById("sus") = "test"
+function Amogus() {  
+    document.getElementById("Sus").innerHTML = "test"
 };
 //setInterval(function(){
 //    document.getElementById("sus").innerHTML = sus
