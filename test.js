@@ -19,5 +19,5 @@ function Save() {
     localStorage.setItem("save",JSON.stringify(save));
 }
 function Load() {
-    var load = JSON.parse(localStorage.getItem("save"))
+    var savegame = JSON.parse(localStorage.getItem("save"))
 }
