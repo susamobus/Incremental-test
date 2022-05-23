@@ -1,7 +1,8 @@
 var amogus = 0
 var sus = 0
 function amogus() {
-    amogus = amogus+1
+    amogus =+ 1
+    document.getElementById("amogus").innerHTML = amogus
 };
 setInterval(function(){
     document.getElementById("sus").innerHTML = sus
