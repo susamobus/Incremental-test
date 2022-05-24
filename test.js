@@ -1,4 +1,4 @@
-var sus = 0
+var sus = 100
 var amogus = 0;
 window.setInterval(function() {
     sus = Math.floor(sus + (0.5 * amogus))
