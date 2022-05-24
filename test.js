@@ -9,8 +9,9 @@ window.setInterval(function() {
     Save()
 },50);
 function Amogus() {  
-    amogus = amogus + (sus / (math.floor(((sus*5)+100)*sus))
-);}
+    amogus = amogus + 1
+    sus = sus - (100+(amogus * 5))
+;}
 function Save() {
     var save = {
         Sus: sus,
