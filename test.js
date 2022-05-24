@@ -22,3 +22,4 @@ function Save() {
 }
 function Load() {
     var savegame = JSON.parse(localStorage.getItem("save"))}
+    
