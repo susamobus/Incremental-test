@@ -1,8 +1,8 @@
 var sus = 0
 var amogus = 0;
 window.setInterval(function() {
-    sus = Math.floor(sus + 0.5 * amogus)
-}, 250);
+    sus = Math.floor(sus + (0.5 * amogus))
+}, 190);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
