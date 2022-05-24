@@ -8,9 +8,10 @@ window.setInterval(function() {
     document.getElementById("amogus").innerHTML = amogus
     Save()
 },50);
-function Amogus() {  
-    amogus = amogus + 1
-    sus = sus - (100 + (amogus * 5))
+function Amogus() { 
+    if (condition) {sus > (100 + (amogus * 5))}
+    amogus = amogus + 1, sus = sus - (100 + (amogus * 5))
+
 ;}
 function Save() {
     var save = {
