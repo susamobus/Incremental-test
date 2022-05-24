@@ -9,7 +9,7 @@ window.setInterval(function() {
     Save()
 },50);
 function Amogus() {  
-    amogus = amogus + math.floor(((amogus*5)+100)*sus
+    amogus = amogus + (sus / (math.floor(((sus*5)+100)*sus))
 );}
 function Save() {
     var save = {
