@@ -3,19 +3,19 @@ var sus = 0
 var amogus = 0
 var amoguscost = 100;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus, ExpantaNum.mul(1, ExpantaNum.add(amogus, 1))))
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(1,ExpantaNum.add(amogus,1))))
 }, 60);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-    amoguscost = ExpantaNum.add(10, ExpantaNum.mul(amogus, 5))
+    amoguscost = ExpantaNum.add(10, ExpantaNum.mul(amogus,5))
     document.getElementById("amoguscost").innerHTML = amoguscost
     Save()
 },50);
 function Amogus() { 
-    if (ExpantaNum.gte(sus, amoguscost)) {
-    amogus = ExpantaNum.add(amogus, 1)
-    sus = ExpantaNum.sub(sus, amoguscost)
+    if (ExpantaNum.gte(sus,amoguscost)) {
+    amogus = ExpantaNum.add(amogus,1)
+    sus = ExpantaNum.sub(sus,amoguscost)
     }
 ;}
 function Save() {
