@@ -7,7 +7,7 @@ window.setInterval(function() {
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-    amoguscost = 100 + amogus * 5
+    amoguscost = 10 + amogus * 5
     document.getElementById("amogusCost").innerHTML = amoguscost
     Save()
 },50);
