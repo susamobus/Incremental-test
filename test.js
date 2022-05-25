@@ -9,7 +9,7 @@ window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     amoguscost = ExpantaNum.add(10, ExpantaNum.mul(amogus, 5))
-    document.getElementById("amogusCost").innerHTML = amoguscost
+    document.getElementById("amoguscost").innerHTML = amoguscost
     Save()
 },50);
 function Amogus() { 
