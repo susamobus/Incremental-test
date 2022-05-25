@@ -6,11 +6,14 @@ window.setInterval(function() {
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
+    var amoguscost = 100 + amogus * 5
+    document.getElementById("amogusCost").innerHTML = amoguscost
     Save()
 },50);
 function Amogus() { 
-    if (sus > (100 + (amogus * 5))) {
-    amogus = amogus + 1, sus = sus - (100 + (amogus * 5))
+    if (sus >= amoguscost) {
+    amogus = amogus + 1
+    sus = sus - amoguscost
     }
 ;}
 function Save() {
