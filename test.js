@@ -1,12 +1,13 @@
 var sus = 105
-var amogus = 0;
+var amogus = 0
+var amoguscost = 100;
 window.setInterval(function() {
-    sus = Math.floor(sus + (1 * amogus))
-}, 90);
+    sus = Math.floor(sus + 1 * amogus)
+}, 200);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-    var amoguscost = 100 + amogus * 5
+    amoguscost = 100 + amogus * 5
     document.getElementById("amogusCost").innerHTML = amoguscost
     Save()
 },50);
