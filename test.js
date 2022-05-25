@@ -1,8 +1,8 @@
-var sus = 105
+var sus = 0
 var amogus = 0
 var amoguscost = 100;
 window.setInterval(function() {
-    sus = Math.floor(sus + 1 * amogus)
+    sus = Math.floor(sus + 1 * (amogus + 1))
 }, 200);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
@@ -25,4 +25,9 @@ function Save() {
     localStorage.setItem("save",JSON.stringify(save));
 }
 function Load() {
-    var savegame = JSON.parse(localStorage.getItem("save"))}
+    var savegame = JSON.parse(localStorage.getItem("save"))};
+function Restart() {
+    sus = 0
+    amogus = 0
+    amoguscost = 100
+}
