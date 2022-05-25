@@ -13,7 +13,7 @@ window.setInterval(function() {
     Save()
 },50);
 function Amogus() { 
-    if (ExpantaNum.get(sus, amoguscost)) {
+    if (ExpantaNum.gte(sus, amoguscost)) {
     amogus = ExpantaNum.add(amogus, 1)
     sus = ExpantaNum.sub(sus, amoguscost)
     }
