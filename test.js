@@ -4,7 +4,7 @@ var amogus = 0
 var amoguscost = 100;
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(1,ExpantaNum.add(amogus,1))))
-}, 60);
+},60);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
