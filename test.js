@@ -8,7 +8,7 @@ window.setInterval(function() {
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-    amoguscost = ExpantaNum.add(10,ExpantaNum.mul(amogus,5))
+    amoguscost = ExpantaNum.add(amoguscost,ExpantaNum.mul(amogus,5))
     document.getElementById("amoguscost").innerHTML = amoguscost
     Save()
 },50);
