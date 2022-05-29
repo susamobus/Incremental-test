@@ -1,5 +1,4 @@
-const requirejs = requirejs("./require");
-const ExpantaNum = requirejs("./ExpantaNum");
+var ExpantaNum = require("./ExpantaNum");
 var sus = 0
 var amogus = 0
 var amoguscost = 100;
