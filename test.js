@@ -1,4 +1,4 @@
-const requirejs = require("./require");
+
 
 var ExpantaNum = requirejs("./ExpantaNum");
 var sus = 0
