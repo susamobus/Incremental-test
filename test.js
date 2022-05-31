@@ -17,7 +17,7 @@ window.setInterval(function() {
     if (mode == 1) {
         amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
         document.getElementById("amoguscost").innerHTML = "All"
-        document.getElementById("amogusamount").innerHTML = amogusconvert
+        document.getElementById("convertamount").innerHTML = amogusconvert
     }
     Save()
 },50);
