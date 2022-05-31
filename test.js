@@ -14,12 +14,14 @@ window.setInterval(function() {
     document.getElementById("amoguscost").innerHTML = amoguscost
     document.getElementById("convertamount").innerHTML = "1"
     document.getElementById("mode").innerHTML = "Convert 1 Amogus each"
+    document.getElementById("mode").style.color = "greenyellow"
     }
     if (mode == 1) {
         amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
         document.getElementById("amoguscost").innerHTML = "All"
         document.getElementById("convertamount").innerHTML = amogusconvert
         document.getElementById("mode").innerHTML = "Convert all at once"
+        document.getElementById("mode").style.color = "lightskyblue"
     }
     Save()
 },50);
