@@ -20,9 +20,9 @@ body {
 .RestartButton {
     background-color: red;
     color: black;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
     height: 40px;
     width: 80px;
 }
