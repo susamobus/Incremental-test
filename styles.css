@@ -2,10 +2,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     border-color: white;
+    background-color: black;
+    color: white;
 }
 .SusButton {
-    background-color: black;
-    color: blue;
+    background-color: white;
+    color: gray;
     padding: 10px;
     border-radius: 10px;
     font-size: 10px;
@@ -17,12 +19,12 @@ body {
     font-size: 20px;
 }
 .AmogusText {
-    color: darkred;
+    color: red;
     font-size: 20px;
 }
 .RestartButton {
     background-color: red;
-    color: black;
+    color: white;
     padding: 5px;
     border-radius: 5px;
     font-size: 10px;
@@ -30,9 +32,8 @@ body {
     width: 80px;
 }
 .SelectButton1 {
-    position: absolute;
     background-color: greenyellow;
-    color: black;
+    color: white;
     padding: 5px;
     border-radius: 5px;
     font-size: 8px;
@@ -40,9 +41,8 @@ body {
     width: 60px;
 }
 .SelectButton2 {
-    position: relative;
     background-color: lightskyblue;
-    color: black;
+    color: white;
     padding: 5px;
     border-radius: 5px;
     font-size: 8px;
