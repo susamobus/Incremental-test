@@ -196,6 +196,9 @@
       }
       return r*m;
     };
+    yfuyfyufuyujfytbuuit
+    vfyfyvr
+    ,./,,/,/.dotAll,./,,[]\
     Q.compare=Q.cmp=function (x,y){
       return new ExpantaNum(x).cmp(y);
     };
