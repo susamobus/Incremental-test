@@ -8,7 +8,7 @@ var crewmatecost = 0
 var crewmate = 0
 var crewmateconvert = 0;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(crewmate,ExpantaNum.add(amogus,1))))
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(crewmate,1),ExpantaNum.add(amogus,1))))
 },60);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
