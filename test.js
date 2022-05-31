@@ -43,7 +43,7 @@ window.setInterval(function() {
 function Amogus() { 
     if (mode == 0) {
         if (ExpantaNum.gte(sus,amoguscost) == true) {
-        amogus = ExpantaNum.add(amogus,1)
+        amogus = ExpantaNum.add(amogus,ExpantaNum.mul(1, crewmate))
         sus = ExpantaNum.sub(sus,amoguscost)
     }}
     if (mode == 1) {
