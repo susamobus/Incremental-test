@@ -17,6 +17,12 @@ function Amogus() {
     sus = ExpantaNum.sub(sus,amoguscost)
     }
 ;}
+function Display(id) {
+    for (i = 0 ; i < document.getElementsByClassName("Display").length ; i++) {
+        document.getElementsByClassName("Display").style.display="none"
+    }
+    document.getElementById(id).style.display = "inline-block";
+}
 function Save() {
     var save = {
         Sus: sus,

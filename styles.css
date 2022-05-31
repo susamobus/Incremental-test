@@ -19,9 +19,19 @@ body {
 }
 .RestartButton {
     background-color: red;
+    color: black;
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
     height: 100px;
     width: 125px;
+}
+.RestartConfirm {
+    background-color: red;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 40px;
+    width: 80px;
 }
