@@ -1,4 +1,4 @@
-const ExpantaNum = require("./ExpantaNum")
+
 
 var sus = 0
 var amogus = 0
@@ -7,7 +7,8 @@ var amogusconvert = 0
 var mode = 0
 var crewmatecost = 0
 var crewmate = 0
-var crewmateconvert = 0;
+var crewmateconvert = 0
+var scientificsus = 0;
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(crewmate,1),ExpantaNum.add(amogus,1))))
 },60);
@@ -15,6 +16,7 @@ window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
+    document.getElementById("scientificsus").innerHTML = scientificsus
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,amoguscost))
     crewmatecost = ExpantaNum.pow(Expantanum.add(crewmate,10),2)
