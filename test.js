@@ -5,7 +5,7 @@ window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(1,ExpantaNum.add(amogus,1))))
 },60);
 window.setInterval(function() {
-    document.getElementById("sus").innerHTML = toString(ExpantaNum.add(1,3))
+    document.getElementById("sus").innerHTML = ExpantaNum.add(1,3)
     document.getElementById("amogus").innerHTML = toString(amogus)
     amoguscost = ExpantaNum.mul(amogus,5)
     document.getElementById("amoguscost").innerHTML = toString(amoguscost)
