@@ -14,7 +14,6 @@ window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
-    document.getElementById("scientificsus").innerHTML = scientificsus
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,amoguscost))
     crewmatecost = ExpantaNum.pow(Expantanum.add(crewmate,10),2)
