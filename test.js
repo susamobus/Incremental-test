@@ -63,6 +63,7 @@ function Load() {
 function Restart() {
     sus = 0
     amogus = 0
+    crewmate = 0
 }
 function Crewmate() {
     if (mode == 0) {
