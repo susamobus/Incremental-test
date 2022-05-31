@@ -1,5 +1,3 @@
-const ExpantaNum = require("./ExpantaNum");
-
 var sus = 0
 var amogus = 0
 var amoguscost = 0
@@ -17,7 +15,7 @@ window.setInterval(function() {
     document.getElementById("convertamount").innerHTML = "1"
     }
     if (mode == 1) {
-        amogusconvert = ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5))
+        amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
         document.getElementById("amoguscost").innerHTML = "All"
         document.getElementById("amogusamount").innerHTML = amogusconvert
     }
