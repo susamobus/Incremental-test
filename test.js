@@ -1,5 +1,3 @@
-const ExpantaNum = require("./ExpantaNum")
-
 var sus = 0
 var amogus = 0
 var amoguscost = 0
@@ -60,9 +58,9 @@ function Restart() {
     sus = 0
     amogus = 0
 }
-function Crewmate()
+function Crewmate() {
    if (ExpantaNum.gte(amogus,crewmatecost) == true) {
        crewmate = ExpantaNum.add(crewmate,1)
        amogus = 0
    }
-        
+}
