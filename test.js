@@ -62,6 +62,7 @@ function Restart() {
 }
 function Crewmate()
    if (ExpantaNum.gte(amogus,crewmatecost) == true) {
-    crewmate = ExpantaNum.add(crewmate,1)
-    amogus = 0
+       crewmate = ExpantaNum.add(crewmate,1)
+       amogus = 0
    }
+        
