@@ -32,9 +32,10 @@ function Amogus() {
         sus = ExpantaNum.sub(sus,amoguscost)
     }}
     if (mode == 1) {
+        if (amogusconvert > 0) {
         amogus = ExpantaNum.add(amogus,amogusconvert)
         sus = 0
-    }
+    }}
 ;}
 function Mode(number) {
     mode = number
