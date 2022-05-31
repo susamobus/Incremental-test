@@ -6,11 +6,15 @@ var mode = 0
 var crewmatecost = 0
 var crewmate = 0
 var crewmateconvert = 0
+var scientificsus = 0
+var roundedlogtensus = 0;
 var teststat = 0;
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(crewmate,1),ExpantaNum.add(amogus,1))))
 },60);
 window.setInterval(function() {
+    roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
+    scientificsus = concat(toString(ExpantaNum.div(sus,roundedlogtensus)),e,toString(roundedlogtensus))
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
