@@ -1,3 +1,4 @@
+const ExpantaNum = require("./ExpantaNum")
 
 var sus = 0
 var amogus = 0
@@ -14,9 +15,11 @@ window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
-    if (mode == 0) {
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
-    crewmatecost = ExpantaNum.pow(ExpantaNum.add(crewmate,10),2)
+    amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,amoguscost))
+    crewmatecost = ExpantaNum.pow(Expantanum.add(crewmate,10),2)
+    crewmateconvert = ExpantaNum.floor(ExpantaNum.div(amogus,crewmatecost))
+    if (mode == 0) {
     document.getElementById("amoguscost").innerHTML = amoguscost
     document.getElementById("amogusamount").innerHTML = "1"
     document.getElementById("crewmatecost").innerHTML = crewmatecost
@@ -25,8 +28,6 @@ window.setInterval(function() {
     document.getElementById("mode").style.color = "greenyellow"
     }
     if (mode == 1) {
-        amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
-        crewmateconvert = ExpantaNum.floor(ExpantaNum.div(amogus,ExpantaNum.root(ExpantaNum.add(crewmate,10),2)))
         document.getElementById("amoguscost").innerHTML = "All"
         document.getElementById("amogusamount").innerHTML = amogusconvert
         document.getElementById("crewmatecost").innerHTML = "1 crewmate when converted"
