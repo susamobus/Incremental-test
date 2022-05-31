@@ -4,7 +4,6 @@ body {
 .SusButton {
     background-color: rgb(0,0,0);
     padding: 10px;
-    border-radius: 10px;
     font-size: 10px;
     height: 100px;
     width: 125px;
@@ -16,4 +15,11 @@ body {
 .AmogusText {
     color: darkred;
     font-size: 20px;
+}
+.RestartButton {
+    background-color: red;
+    padding: 10px;
+    font-size: 20px;
+    height: 100px;
+    width: 125px;
 }
