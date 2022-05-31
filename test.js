@@ -1,6 +1,3 @@
-
-
-var ExpantaNum = require("ExpantaNum.js");
 var sus = 0
 var amogus = 0
 var amoguscost = 100;
