@@ -66,7 +66,7 @@ function Restart() {
 }
 function Crewmate() {
     if (mode == 0) {
-    if (ExpantaNum.gte(sus,crewmateconvert) == true) {
+    if (ExpantaNum.gte(amogus,crewmateconvert) == true) {
         crewmate = ExpantaNum.add(crewmate,1)
         amogus = 0
         sus = 0
