@@ -9,7 +9,7 @@ body {
     color: black;
     padding: 10px;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 15px;
     height: 100px;
     width: 120px;
 }
@@ -45,7 +45,7 @@ body {
 }
 .SelectButton1 {
     background-color: greenyellow;
-    color: white;
+    color: black;
     padding: 5px;
     border-radius: 5px;
     font-size: 8px;
@@ -54,7 +54,7 @@ body {
 }
 .SelectButton2 {
     background-color: lightskyblue;
-    color: white;
+    color: black;
     padding: 5px;
     border-radius: 5px;
     font-size: 8px;

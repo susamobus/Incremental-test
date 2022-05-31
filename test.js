@@ -1,4 +1,3 @@
-const ExpantaNum = require("./ExpantaNum")
 
 var sus = 0
 var amogus = 0
