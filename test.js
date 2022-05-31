@@ -26,7 +26,7 @@ window.setInterval(function() {
     }
     if (mode == 1) {
         amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
-        crewmateconvert = ExpantaNum.floor(ExpantaNum.root(ExpantaNum.add(crewmate,10)))
+        crewmateconvert = ExpantaNum.floor(ExpantaNum.root(ExpantaNum.add(crewmate,10),2))
         document.getElementById("amoguscost").innerHTML = "All"
         document.getElementById("amogusamount").innerHTML = amogusconvert
         document.getElementById("crewmatecost").innerHTML = "1 crewmate when converted"
