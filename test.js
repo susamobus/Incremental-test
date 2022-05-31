@@ -1,22 +1,42 @@
+const ExpantaNum = require("./ExpantaNum");
+
 var sus = 0
 var amogus = 0
-var amoguscost = 100;
+var amoguscost = 0
+var amogusconvert = 0
+var mode = 0;
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(1,ExpantaNum.add(amogus,1))))
 },60);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
-    amoguscost = ExpantaNum.mul(amogus,5)
+    if (mode == 0) {
+    amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     document.getElementById("amoguscost").innerHTML = amoguscost
+    document.getElementById("convertamount").innerHTML = "1"
+    }
+    if (mode == 1) {
+        amogusconvert = ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5))
+        document.getElementById("amoguscost").innerHTML = "All"
+        document.getElementById("amogusamount").innerHTML = amogusconvert
+    }
     Save()
 },50);
 function Amogus() { 
-    if (ExpantaNum.gte(sus,amoguscost) == true) {
-    amogus = ExpantaNum.add(amogus,1)
-    sus = ExpantaNum.sub(sus,amoguscost)
+    if (mode == 0) {
+        if (ExpantaNum.gte(sus,amoguscost) == true) {
+        amogus = ExpantaNum.add(amogus,1)
+        sus = ExpantaNum.sub(sus,amoguscost)
+    }}
+    if (mode == 1) {
+        amogus = ExpantaNum.add(amogus,amogusconvert)
+        sus = 0
     }
 ;}
+function Mode(number) {
+    mode = number
+}
 function Save() {
     var save = {
         Sus: sus,
@@ -29,5 +49,4 @@ function Load() {
 function Restart() {
     sus = 0
     amogus = 0
-    amoguscost = 100
 }

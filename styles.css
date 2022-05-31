@@ -7,7 +7,7 @@ body {
     border-radius: 10px;
     font-size: 10px;
     height: 100px;
-    width: 125px;
+    width: 120px;
 }
 .SusText {
     color: red;
@@ -25,4 +25,22 @@ body {
     font-size: 10px;
     height: 40px;
     width: 80px;
+}
+.SelectButton1 {
+    background-color: greenyellow;
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    height: 100px;
+    width: 60px;
+}
+.SelectButton2 {
+    background-color: lightskyblue;
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    height: 100px;
+    width: 60px;
 }
