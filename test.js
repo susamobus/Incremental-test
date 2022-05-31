@@ -13,11 +13,13 @@ window.setInterval(function() {
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     document.getElementById("amoguscost").innerHTML = amoguscost
     document.getElementById("convertamount").innerHTML = "1"
+    document.getElementById("mode").innerHTML = "Convert 1 Amogus each"
     }
     if (mode == 1) {
         amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,ExpantaNum.mul(ExpantaNum.add(amogus,1),5)))
         document.getElementById("amoguscost").innerHTML = "All"
         document.getElementById("convertamount").innerHTML = amogusconvert
+        document.getElementById("mode").innerHTML = "Convert all at once"
     }
     Save()
 },50);
