@@ -30,8 +30,8 @@ body {
 .SelectButton1 {
     background-color: greenyellow;
     color: black;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 5px;
+    border-radius: 5px;
     font-size: 8px;
     height: 50px;
     width: 60px;
@@ -39,8 +39,8 @@ body {
 .SelectButton2 {
     background-color: lightskyblue;
     color: black;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 5px;
+    border-radius: 5px;
     font-size: 8px;
     height: 50px;
     width: 60px;
