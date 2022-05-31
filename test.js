@@ -5,7 +5,7 @@ var sus = 0
 var amogus = 0
 var amoguscost = 100;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(1,ExpantaNum.add(amogus,1))))
+    sus = new ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.add(amogus,1)))
 },60);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
@@ -15,7 +15,7 @@ window.setInterval(function() {
     Save()
 },50);
 function Amogus() { 
-    if (ExpantaNum.gte(sus,amoguscost)) {
+    if (ExpantaNum.gte(sus,amoguscost) = true) {
     amogus = ExpantaNum.add(amogus,1)
     sus = ExpantaNum.sub(sus,amoguscost)
     }
