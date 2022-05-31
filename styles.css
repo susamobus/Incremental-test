@@ -15,10 +15,10 @@ body {
 }
 .CrewmateButton {
     background-color: rgba(225, 225, 255, 0.9);
-    color: rgb(150,225,255);
+    color: rgb(50,125,120);
     padding: 10px;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 15px;
     height: 110px;
     width: 128px;
 }
