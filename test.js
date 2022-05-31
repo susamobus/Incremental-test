@@ -18,6 +18,7 @@ function Amogus() {
     }
 ;}
 function Display(id) {
+    var i;
     for (i = 0 ; i < document.getElementsByClassName("Display").length ; i++) {
         document.getElementsByClassName("Display").style.display="none"
     }
