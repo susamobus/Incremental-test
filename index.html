@@ -6,14 +6,14 @@
         <script src="ExpantaNum.js"></script>
     </head>
     <body onload="Load()">
-        <button class="SelectButton1" onClick="Amogusmode(0)">Convert 1 Amogus each</button>
-        <button class="SelectButton2" onClick="Amogusmode(1)">Convert all at once</button>
+        <button class="SelectButton1" onClick="Mode(0)">Convert 1 each</button>
+        <button class="SelectButton2" onClick="Mode(1)">Convert all at once</button>
         <p><span>Mode: <span id="mode">Loading</span></span></p>
-        <button class="SusButton" onClick="Amogus()"><span id="amoguscost">0</span> sus to <span id="convertamount">1</span> amogus (2x sus)</button>
+        <button class="SusButton" onClick="Amogus()"><span id="amoguscost">0</span> sus to <span id="amogusamount">1</span> amogus (2x sus)</button>
         <p>Sus : <span class="SusText" id="sus">sus</span></p>
         <p>Amogus : <span class="AmogusText" id="amogus">amogus</span></p>
+        <button class="CrewmateButton" onClick="crewmate">Reset all amogus for <span id="crewmateamount">0</span> crewmate. Requires <span id="crewmatecost">0</span></button>
         <p>Crewmate : <span class="CrewmateText" id="crewmate">crewmate</span></p>
         <button class="RestartButton" onClick="Restart()">Reset Progress</button>
-        <button class="CrewmateButton" onClick="Crewmate()">Get 1 Crewmate (ConvertAll not implemented yet)</button>
     </body>
 </html>

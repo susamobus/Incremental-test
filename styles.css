@@ -14,8 +14,8 @@ body {
     width: 120px;
 }
 .CrewmateButton {
-    background-color: rgba(225, 225, 255, 0.9);
-    color: rgb(50,125,120);
+    background-color: lightblue;
+    color: darkblue;
     padding: 10px;
     border-radius: 10px;
     font-size: 15px;
@@ -27,7 +27,7 @@ body {
     font-size: 20px;
 }
 .AmogusText {
-    color: red;
+    color: darkred;
     font-size: 20px;
 }
 .CrewmateText {
