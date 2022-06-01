@@ -48,7 +48,7 @@ function Amogus() {
     }}
     if (mode == 1) {
         if (ExpantaNum.gt(amogusconvert,0) == true) {
-        amogus = ExpantaNum.add(amogus,ExpantaNum.mul(amogusconvert,ExpantaNum.add(crewmate,1)))
+        amogus = ExpantaNum.add(amogus,amogusconvert)
         sus = 0
     }}
 ;}
