@@ -19,7 +19,7 @@ window.setInterval(function() {
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
-    amogusconvert = ExpantaNum.floor(ExpantaNum.div(sus,amoguscost))
+    amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost)),ExpantaNum.add(crewmate,1))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
     crewmateconvert = ExpantaNum.floor(ExpantaNum.div(amogus,crewmatecost))
     if (mode == 0) {
