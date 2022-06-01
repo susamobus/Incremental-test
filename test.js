@@ -10,7 +10,7 @@ var scientificsus = 0
 var roundedlogtensus = 0;
 var teststat = 0;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(crewmate,1),ExpantaNum.add(amogus,1))))
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
 },60);
 window.setInterval(function() {
     roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
