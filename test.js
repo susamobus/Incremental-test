@@ -17,7 +17,7 @@ window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))),ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3)))))
 },60);
 window.setInterval(function() {
-    if (ExpantaNum.lte(impostor,0)) {
+    if (ExpantaNum.lte(impostor,0) == true) {
         preventimpostormultifromzero = 1
     } else {
         preventimpostormultifromzero = 0
