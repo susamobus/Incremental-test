@@ -22,6 +22,15 @@ body {
     height: 110px;
     width: 128px;
 }
+.ImpostorButton {
+    background-color: rgb(255, 192, 192);
+    color: rgb(99, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 110px;
+    width: 128px;
+}
 .SusText {
     color: red;
     font-size: 20px;
@@ -32,6 +41,10 @@ body {
 }
 .CrewmateText {
     color: aqua;
+    font-size: 20px;
+}
+.ImpostorText {
+    color:crimson;
     font-size: 20px;
 }
 .RestartButton {

@@ -6,22 +6,35 @@ var mode = 0
 var crewmatecost = 0
 var crewmate = 0
 var crewmateconvert = 0
+var impostor = 0
+var impostorcost = 0
+var impostorconvert = 0
+var preventimpostormultifromzero = 0
 var scientificsus = 0
-var roundedlogtensus = 0;
+var roundedlogtensus = 0
 var teststat = 0;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
+    if (ExpantaNum.lte(impostor,0)) {
+        preventimpostormultifromzero = 1
+    } else {
+        preventimpostormultifromzero = 0
+    }
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))),ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3)))))
 },60);
 window.setInterval(function() {
+
     roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
     scientificsus = toString(ExpantaNum.div(sus,roundedlogtensus))+"e"+toString(roundedlogtensus)
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
+    document.getElementById("impostor").innerHTML = impostor
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
-    crewmateconvert = ExpantaNum.floor(ExpantaNum.div(amogus,crewmatecost))
+    crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpanaNum.add(impostor,1)))
+    impostorcost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2,impostor),12),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),10)),10)
+    impostorconvert = ExpantaNum.floor(ExpantaNum.div(crewmate,impostorcost))
     if (mode == 0) {
     document.getElementById("amoguscost").innerHTML = amoguscost
     document.getElementById("amogusamount").innerHTML = "1"
@@ -72,7 +85,7 @@ function Restart() {
 function Crewmate() {
     if (mode == 0) {
     if (ExpantaNum.gte(amogus,crewmatecost) == true) {
-        crewmate = ExpantaNum.add(crewmate,1)
+        crewmate = ExpantaNum.add(crewmate,ExpantaNum.add(1,impostor))
         amogus = 0
         sus = 0
     }}
@@ -85,4 +98,20 @@ function Crewmate() {
 }
 function Test() {
     teststat = teststat + 1
+}
+function Impostor() {
+    if (mode == 0) {
+        if (ExpantaNum.gte(crewmate,impostorcost) == true) {
+            impostor = ExpantaNum.add(impostor,1)
+            amogus = 0
+            sus = 0
+            crewmate = 0
+        }}
+        if (mode == 1) {
+        if (ExpantaNum.gt(impostorconvert,0) == true) {
+            impostor = ExpantaNum.add(impostor,impostorconvert)
+            amogus = 0
+            sus = 0
+            crewmate = 0
+        }}
 }
