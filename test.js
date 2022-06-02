@@ -14,15 +14,14 @@ var scientificsus = 0
 var roundedlogtensus = 0
 var teststat = 0;
 window.setInterval(function() {
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))),ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3)))))
+},60);
+window.setInterval(function() {
     if (ExpantaNum.lte(impostor,0)) {
         preventimpostormultifromzero = 1
     } else {
         preventimpostormultifromzero = 0
     }
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))),ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3)))))
-},60);
-window.setInterval(function() {
-
     roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
     scientificsus = toString(ExpantaNum.div(sus,roundedlogtensus))+"e"+toString(roundedlogtensus)
     document.getElementById("sus").innerHTML = sus
