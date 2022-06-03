@@ -14,7 +14,7 @@ var scientificsus = 0
 var roundedlogtensus = 0
 var teststat = 0;
 window.setInterval(function() {
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))),ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3)))))
+    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(preventimpostormultifromzero,ExpantaNum.mul(impostor,3),ExpantaNum.mul(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))))
 },60);
 window.setInterval(function() {
     if (ExpantaNum.lte(impostor,0) == true) {
