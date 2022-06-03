@@ -39,6 +39,8 @@ window.setInterval(function() {
     document.getElementById("amogusamount").innerHTML = "1"
     document.getElementById("crewmatecost").innerHTML = crewmatecost
     document.getElementById("crewmateamount").innerHTML = "1 amogus"
+    document.getElementById("impostorcost").innerHTML = impostorcost
+    document.getElementById("impostoramount").innerHTML = "1 crewmate"
     document.getElementById("mode").innerHTML = "Convert 1 for each"
     document.getElementById("mode").style.color = "greenyellow"
     }
@@ -47,6 +49,8 @@ window.setInterval(function() {
         document.getElementById("amogusamount").innerHTML = amogusconvert
         document.getElementById("crewmatecost").innerHTML = "1 crewmate when converted"
         document.getElementById("crewmateamount").innerHTML = crewmateconvert
+        document.getElementById("crewmatecost").innerHTML = "1 impostor when converted"
+        document.getElementById("crewmateamount").innerHTML = impostorconvert
         document.getElementById("mode").innerHTML = "Convert all at once"
         document.getElementById("mode").style.color = "lightskyblue"
     }
