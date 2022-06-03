@@ -52,7 +52,6 @@
 
   // ExpantaNum prototype methods
 
-  
   /*
    *  absoluteValue             abs
    *  affordArithmeticSeries
