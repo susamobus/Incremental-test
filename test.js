@@ -38,9 +38,9 @@ window.setInterval(function() {
     document.getElementById("amoguscost").innerHTML = amoguscost
     document.getElementById("amogusamount").innerHTML = "1"
     document.getElementById("crewmatecost").innerHTML = crewmatecost
-    document.getElementById("crewmateamount").innerHTML = "1 amogus"
+    document.getElementById("crewmateamount").innerHTML = "1"
     document.getElementById("impostorcost").innerHTML = impostorcost
-    document.getElementById("impostoramount").innerHTML = "1 crewmate"
+    document.getElementById("impostoramount").innerHTML = "1"
     document.getElementById("mode").innerHTML = "Convert 1 for each"
     document.getElementById("mode").style.color = "greenyellow"
     }
