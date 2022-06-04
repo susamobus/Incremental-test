@@ -74,16 +74,19 @@ function Mode(number) {
 function Save() {
     var save = {
         Sus: sus,
-        Amogus: amogus
+        Amogus: amogus,
+        Crewmate: crewmate,
+        Impostor: impostor
     }
     localStorage.setItem("save",JSON.stringify(save));
 }
 function Load() {
-    var savegame = JSON.parse(localStorage.getItem("save"))};
+    var save = JSON.parse(localStorage.getItem("save"))};
 function Restart() {
     sus = 0
     amogus = 0
     crewmate = 0
+    impostor = 0
 }
 function Crewmate() {
     if (mode == 0) {
