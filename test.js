@@ -41,7 +41,7 @@ window.setInterval(function() {
     document.getElementById("crewmateamount").innerHTML = "1"
     document.getElementById("impostorcost").innerHTML = impostorcost
     document.getElementById("impostoramount").innerHTML = "1"
-    document.getElementById("mode").innerHTML = "Convert 1 for each"
+    document.getElementById("mode").innerHTML = "Buy singles"
     document.getElementById("mode").style.color = "greenyellow"
     }
     if (mode == 1) {
@@ -51,7 +51,7 @@ window.setInterval(function() {
         document.getElementById("crewmateamount").innerHTML = crewmateconvert
         document.getElementById("crewmatecost").innerHTML = "1 impostor when converted"
         document.getElementById("crewmateamount").innerHTML = impostorconvert
-        document.getElementById("mode").innerHTML = "Convert all at once"
+        document.getElementById("mode").innerHTML = "Buy max"
         document.getElementById("mode").style.color = "lightskyblue"
     }
     Save()
