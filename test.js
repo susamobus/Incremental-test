@@ -49,7 +49,7 @@ window.setInterval(function() {
         document.getElementById("amogusamount").innerHTML = amogusconvert
         document.getElementById("crewmatecost").innerHTML = "1 crewmate when converted"
         document.getElementById("crewmateamount").innerHTML = crewmateconvert
-        document.getElementById("impsostorcost").innerHTML = "1 impostor when converted"
+        document.getElementById("impostorcost").innerHTML = "1 impostor when converted"
         document.getElementById("impostoramount").innerHTML = impostorconvert
         document.getElementById("mode").innerHTML = "Buy max"
         document.getElementById("mode").style.color = "lightskyblue"
