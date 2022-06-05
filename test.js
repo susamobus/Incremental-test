@@ -18,7 +18,7 @@ var tokens = 0;
 window.onload = function() {
    Load()
 
-   Fixstatserror()
+   Fixstaterror()
 };
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
@@ -99,7 +99,9 @@ function Restart() {
     amogus = 0
     crewmate = 0
     impostor = 0
-}
+    var saveddata = {};
+    localStorage.setItem("saveddata", JSON.stringify(saveddata))}
+    location.reload
 function Crewmate() {
     if (mode == 0) {
     if (ExpantaNum.gte(amogus,crewmatecost) == true) {
@@ -133,7 +135,7 @@ function Impostor() {
             crewmate = 0
         }}
 }
-function Fixstatserror() {
+function Fixstaterror() {
     sus = ExpantaNum.add(sus,0)
     amogus = ExpantaNum.add(amogus,0)
     crewmate = ExpantaNum.add(crewmate,0)
