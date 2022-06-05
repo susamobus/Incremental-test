@@ -18,6 +18,7 @@ var isloading = true;
 window.onload = function() {
    Load()
    Fixstaterror()
+   isloading = false
 };
 window.setInterval(function() {
     if (isloading !== true){
