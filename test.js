@@ -17,7 +17,7 @@ var tokens = 0;
 
 window.onload = function() {
    Load()
-
+   Fixstatserror()
 };
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
@@ -131,4 +131,10 @@ function Impostor() {
             sus = 0
             crewmate = 0
         }}
+}
+function Fixstatserror() {
+    sus = ExpantaNum.add(sus,0)
+    amogus = ExpantaNum.add(amogus,0)
+    crewmate = ExpantaNum.add(crewmate,0)
+    impostor = ExpantaNum.add(impostor,0)
 }
