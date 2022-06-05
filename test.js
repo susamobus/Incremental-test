@@ -99,8 +99,10 @@ function Restart() {
     crewmate = 0
     impostor = 0
     var saveddata = {};
-    localStorage.setItem("saveddata", JSON.stringify(saveddata))}
-    location.reload
+    localStorage.setItem("saveddata", JSON.stringify(saveddata))
+    location.reload();
+
+}
 function Crewmate() {
     if (mode == 0) {
     if (ExpantaNum.gte(amogus,crewmatecost) == true) {
