@@ -16,11 +16,11 @@ var teststat = 0
 var tokens = 0
 var isloaded = false;
 
-window.onload = function() {
+window.onload(function() {
    Load()
    Fixstatserror()
    isloaded = true
-};
+});
 window.setInterval(function() {
   if (isloaded == true) {
    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
