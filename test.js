@@ -30,7 +30,6 @@ window.setInterval(function() {
         preventimpostormultifromzero = 0
     }
     roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
-    scientificsus = toString(ExpantaNum.div(sus,roundedlogtensus))+"e"+toString(roundedlogtensus)
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
