@@ -9,29 +9,24 @@ var crewmateconvert = 0
 var impostor = 0
 var impostorcost = 0
 var impostorconvert = 0
-var preventimpostormultifromzero = 1
 var scientificsus = 0
 var roundedlogtensus = 0
 var teststat = 0
-var tokens = 0;
+var tokens = 0
+var isloading = true;
 
 window.onload = function() {
    Load()
-
    Fixstaterror()
 };
 window.setInterval(function() {
+    if (isloading !== true){
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
-},60);
+}},60);
 window.setInterval(function() {
    Save()
 },250);
 window.setInterval(function() {
-    if (ExpantaNum.lte(impostor,0) == true) {
-        preventimpostormultifromzero = 1
-    } else {
-        preventimpostormultifromzero = 0
-    }
     roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
@@ -141,7 +136,11 @@ function Impostor() {
 }
 function Fixstaterror() {
     sus = ExpantaNum.add(sus,0)
-    amogus = ExpantaNum.add(amogus,0)
-    crewmate = ExpantaNum.add(crewmate,0)
-    impostor = ExpantaNum.add(impostor,0)
+    amogus = ExpantaNum.add(amogus,0.001)
+    crewmate = ExpantaNum.add(crewmate,0.001)
+    impostor = ExpantaNum.add(impostor,0.001)
+    amogus = ExpantaNum.floor(amogus)
+    crewmate = ExpantaNum.floor(crewmate)
+    impostor = ExpantaNum.floor(impostor)
+    isloading = false
 }
