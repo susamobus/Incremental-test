@@ -12,7 +12,13 @@ var impostorconvert = 0
 var preventimpostormultifromzero = 1
 var scientificsus = 0
 var roundedlogtensus = 0
-var teststat = 0;
+var teststat = 0
+var tokens = 0;
+
+window.onload = function() {
+   Load()
+
+};
 window.setInterval(function() {
     sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
 },60);
@@ -73,15 +79,20 @@ function Mode(number) {
 }
 function Save() {
     var save = {
-        Sus: sus,
-        Amogus: amogus,
-        Crewmate: crewmate,
-        Impostor: impostor
-    }
-    localStorage.setItem("save",JSON.stringify(save));
+        sus: sus,
+        amogus: amogus,
+        crewmate: crewmate,
+        impostor: impostor
+    };
+    localStorage.setItem("save", JSON.stringify(save));
 }
 function Load() {
-    var save = JSON.parse(localStorage.getItem("save"))};
+    var saveddata = JSON.parse(localStorage.getItem("save"));
+    if (typeof saveddata.sus !== "undefined") sus = saveddata.sus;
+    if (typeof saveddata.amogus !== "undefined") amogus = saveddata.amogus;
+    if (typeof saveddata.crewmate !== "undefined") crewmate = saveddata.crewmate;
+    if (typeof saveddata.impostor !== "undefined") impostor = saveddata.impostor;
+}
 function Restart() {
     sus = 0
     amogus = 0
