@@ -9,7 +9,6 @@ var crewmateconvert = 0
 var impostor = 0
 var impostorcost = 0
 var impostorconvert = 0
-var scientificsus = 0
 var roundedlogtensus = 0
 var teststat = 0
 var tokens = 0
@@ -22,7 +21,7 @@ window.onload = function() {
 };
 window.setInterval(function() {
     if (isloading !== true){
-    sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
+      sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
 }},60);
 window.setInterval(function() {
    Save()
@@ -140,6 +139,7 @@ function Fixstaterror() {
     amogus = ExpantaNum.add(amogus,0.001)
     crewmate = ExpantaNum.add(crewmate,0.001)
     impostor = ExpantaNum.add(impostor,0.001)
+    setTimeout(100)
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
