@@ -146,5 +146,5 @@ function Fixstaterror() {
     impostor = ExpantaNum.floor(impostor)
 }
 function doneloading() {
-    isloading = ExpantaNum.sub(isloading,1)
+    isloading = ExpantaNum.mul(isloading,0)
 }
