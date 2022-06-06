@@ -11,7 +11,7 @@ var impostorcost = 0
 var impostorconvert = 0
 var teststat = 0
 var tokens = 0
-var isloading = true;
+var isloading = 1; //1 = true 0 = false
 
 window.onload = function() {
    Load()
@@ -19,7 +19,7 @@ window.onload = function() {
    doneloading()
 };
 window.setInterval(function() {
-    if (isloading == false){
+    if (isloading == 0){
       sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
 }},60);
 window.setInterval(function() {
@@ -143,5 +143,5 @@ function Fixstaterror() {
     impostor = ExpantaNum.floor(impostor)
 }
 function doneloading() {
-    isloading = false
+    isloading = ExpantaNum.sub(isloading,1)
 }
