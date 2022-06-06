@@ -9,7 +9,6 @@ var crewmateconvert = 0
 var impostor = 0
 var impostorcost = 0
 var impostorconvert = 0
-var roundedlogtensus = 0
 var teststat = 0
 var tokens = 0
 var isloading = true;
@@ -27,7 +26,6 @@ window.setInterval(function() {
    Save()
 },250);
 window.setInterval(function() {
-    roundedlogtensus = ExpantaNum.floor(ExpantaNum.log10(sus))
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
