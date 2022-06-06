@@ -143,5 +143,4 @@ function Fixstaterror() {
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
-    isloading = false
 }
