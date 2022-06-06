@@ -19,7 +19,7 @@ window.onload = function() {
    isloading = false
 };
 window.setInterval(function() {
-    if (isloading !== true){
+    if (isloading == false){
       sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
 }},60);
 window.setInterval(function() {
