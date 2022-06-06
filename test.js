@@ -26,6 +26,9 @@ window.setInterval(function() {
    Save()
 },250);
 window.setInterval(function() {
+    doneloading()
+ },420.69);
+window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
