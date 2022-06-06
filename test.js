@@ -16,7 +16,7 @@ var isloading = true;
 window.onload = function() {
    Load()
    Fixstaterror()
-   isloading = false
+   doneloading()
 };
 window.setInterval(function() {
     if (isloading == false){
@@ -141,4 +141,7 @@ function Fixstaterror() {
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
+}
+function doneloading() {
+    isloading = false
 }

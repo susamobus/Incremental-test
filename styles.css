@@ -56,6 +56,15 @@ body {
     height: 40px;
     width: 80px;
 }
+.FixSusGainButton {
+    background-color: greenyellow;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 40px;
+    width: 80px;
+}
 .SelectButton1 {
     background-color: greenyellow;
     color: black;
