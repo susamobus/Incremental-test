@@ -27,6 +27,7 @@ window.setInterval(function() {
 },250);
 window.setInterval(function() {
     doneloading()
+    Fixstaterror()
  },59);
 window.setInterval(function() {
     document.getElementById("sus").innerHTML = sus
@@ -137,10 +138,9 @@ function Impostor() {
 }
 function Fixstaterror() {
     sus = ExpantaNum.add(sus,0)
-    amogus = ExpantaNum.add(amogus,0.001)
-    crewmate = ExpantaNum.add(crewmate,0.001)
-    impostor = ExpantaNum.add(impostor,0.001)
-    setTimeout(100)
+    amogus = ExpantaNum.add(amogus,0.000001)
+    crewmate = ExpantaNum.add(crewmate,0.000001)
+    impostor = ExpantaNum.add(impostor,0.000001)
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
