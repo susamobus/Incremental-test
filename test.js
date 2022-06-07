@@ -1,4 +1,6 @@
 var sus = 0
+var susgainpertick = 0
+var lifetimesus = 0
 var amogus = 0
 var amoguscost = 0
 var amogusconvert = 0
@@ -20,7 +22,9 @@ window.onload = function() {
 };
 window.setInterval(function() {
     if (isloading == 0){
-      sus = ExpantaNum.floor(ExpantaNum.add(sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
+      susgainpertick = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
+      sus = ExpantaNum.floor(ExpantaNum.add(sus,susgainpertick))
+      lifetimesus = ExpantaNum.floor(ExpantaNum.add(lifetimesus,susgainpertick))
 }},60);
 window.setInterval(function() {
    Save()
@@ -38,7 +42,7 @@ window.setInterval(function() {
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
     crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpantaNum.add(impostor,1)))
-    impostorcost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2,impostor),12),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10)
+    impostorcost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.25,impostor),12),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10)
     impostorconvert = ExpantaNum.floor(ExpantaNum.div(crewmate,impostorcost))
     if (mode == 0) {
     document.getElementById("amoguscost").innerHTML = amoguscost
