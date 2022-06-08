@@ -152,5 +152,3 @@ function Fixstaterror() {
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
 }
-function unlock(featureunlocking)
-    var featureunlocking = true
