@@ -1,4 +1,5 @@
 var sus = 0
+var suffixedsus = 0 //(suffix converted version of sus stat, only for display purposes)
 var susgainpertick = 0
 var lifetimesus = 0
 var amogus = 0
@@ -35,7 +36,9 @@ window.setInterval(function() {
     Fixstaterror()
  },59);
 window.setInterval(function() {
+    suffixedsus = toSuffixes(sus)
     document.getElementById("sus").innerHTML = sus
+    document.getElementById("suffixedsus").innerHTML = suffixedsus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor

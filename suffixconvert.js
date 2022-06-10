@@ -31,7 +31,9 @@ var toSuffix
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,33)) && ExpantaNum.lt(num,ExpantaNum.pow(10,36)) == true) {
     return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e31)),100),"De"].join("")
   }
-
+  else if (ExpantaNum.gte(num,ExpantaNum.pow(10,36))) {
+   return num
+  }
 
 
 
