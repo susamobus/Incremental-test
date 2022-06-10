@@ -38,6 +38,10 @@ body {
     color: red;
     font-size: 20px;
 }
+.SusTextSuffixed {
+    color: rgb(255,0,25.5);
+    font-size: 20px;
+}
 .AmogusText {
     color: darkred;
     font-size: 20px;
