@@ -34,6 +34,9 @@ var toSuffix
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,36))) {
    return num
   }
+  else if (ExpantaNum.lt(num,ExpantaNum.pow(10,6))) {
+    return num
+   }
 
 
 
