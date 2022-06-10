@@ -13,7 +13,8 @@ var impostorcost = 0
 var impostorconvert = 0
 var teststat = 0
 var tokens = 0
-var isloading = 1; //1 = true 0 = false
+var isloading = 1  //1 = true 0 = false
+var unlocks = []; 
 
 window.onload = function() {
    Load()
