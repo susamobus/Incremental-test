@@ -1,8 +1,6 @@
 //file used for notations
 
 
-var toSuffix
-
 
  function toSuffixes(num){
   if (ExpantaNum.gte(num,ExpantaNum.pow(10,6)) && ExpantaNum.lt(num,ExpantaNum.pow(10,9)) == true) {
