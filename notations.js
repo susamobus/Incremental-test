@@ -13,7 +13,7 @@
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,12)) && ExpantaNum.lt(num,ExpantaNum.pow(10,15)) == true) {
     return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e10)),100),"T"].join("")
   }
-  else if (ExpantaNum.gte(num,ExpantaNum.pow(10,15)) && ExpantaNum.lt(num,ExpantaNum.pow(10,12)) == true) {
+  else if (ExpantaNum.gte(num,ExpantaNum.pow(10,15)) && ExpantaNum.lt(num,ExpantaNum.pow(10,18)) == true) {
     return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e13)),100),"Qd"].join("")
   }
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,18)) && ExpantaNum.lt(num,ExpantaNum.pow(10,21)) == true) {
@@ -49,7 +49,3 @@ function toRoundedScientific(num,roundpower) {
     return num
   }
   }
-
-
-
-  
