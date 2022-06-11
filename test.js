@@ -168,7 +168,7 @@ function Fixstaterror() {
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
 }
-function notation(num) {
+function Notation(num) {
    notation = num
    // notations IDs: 1 = suffixes, 2 = scientific
 }
