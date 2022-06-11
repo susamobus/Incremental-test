@@ -33,7 +33,7 @@
     return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e31)),100),"De"].join("")
   }
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,36))) {
-   return num
+   return toRoundedScientific(num,3)
   }
   else if (ExpantaNum.lt(num,ExpantaNum.pow(10,6))) {
     return num
