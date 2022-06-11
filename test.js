@@ -191,4 +191,7 @@ function unlockbuttons() {
   if (ExpantaNum.gte(lifetimesus,5e14) == true) {
     document.getElementsByClassName("UnlockTokensButton").style.opacity = 1
   }
+  if (unlocks.includes("tokens") == true) {
+    document.getElementsByClassName("TokensButtons").style.opacity = 1
+  }
 }
