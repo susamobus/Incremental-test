@@ -39,6 +39,7 @@ window.setInterval(function() {
  },59);
 window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
+    scientificsus = toRoundedScientific(sus,3)
     if (notation == 1) {
     document.getElementById("displayedsus").innerHTML = suffixedsus
     document.getElementById("notation").innerHTML = "suffixes"
