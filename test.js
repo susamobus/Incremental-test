@@ -15,7 +15,8 @@ var impostorconvert = 0
 var teststat = 0
 var tokens = 0
 var isloading = 1  //1 = true 0 = false
-var unlocks = []; 
+var unlocks = []
+var notation = suffixes; 
 
 window.onload = function() {
    Load()
@@ -157,4 +158,8 @@ function Fixstaterror() {
 }
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
+}
+function notation(input) {
+   notation = input
+   // notations: suffixes, scientific
 }
