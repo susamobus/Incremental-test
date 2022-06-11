@@ -1,4 +1,7 @@
-var toSuffix
+//file used for notations
+
+
+
 
 
  function toSuffixes(num){
@@ -37,34 +40,16 @@ var toSuffix
   else if (ExpantaNum.lt(num,ExpantaNum.pow(10,6))) {
     return num
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
- 
+// roundpower = round to nearest roundpower decimal, 3 round power will round to nearest 0.001 or (1/1e3)
+function toRoundedScientific(num,roundpower) {
+  if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1000)) == true) {
+   return ExpantaNum.mul(ExpantaNum.pow(10,ExpantaNum.sub(ExpantaNum.round(ExpantaNum.log10(num)),roundpower)),ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.round(ExpantaNum.minus(ExpantaNum.log10(num),roundpower)))))))  
+  } else {
+    return num
+  }
+  }
+
+
+
+  
