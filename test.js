@@ -30,6 +30,7 @@ window.setInterval(function() {
       susgainpertick = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
       sus = ExpantaNum.floor(ExpantaNum.add(sus,susgainpertick))
       lifetimesus = ExpantaNum.floor(ExpantaNum.add(lifetimesus,susgainpertick))
+      unlockbuttons()
 }},50);
 window.setInterval(function() {
    Save()
