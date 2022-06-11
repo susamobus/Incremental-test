@@ -41,8 +41,12 @@ window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
     if (notation == 1) {
     document.getElementById("displayedsus").innerHTML = suffixedsus
+    document.getElementById("notation").innerHTML = "suffixes"
+    document.getElementById("notation").style.color = "royalblue"
 } else if (notation == 2) {
     document.getElementById("displayedsus").innerHTML = scientificsus
+    document.getElementById("notation").innerHTML = "scientific"
+    document.getElementById("notation").style.color = "lightsteelblue"
 }
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
