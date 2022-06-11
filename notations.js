@@ -2,7 +2,7 @@
 
 
 
- function toSuffixes(num){
+function toSuffixes(num){
   if (ExpantaNum.gte(num,ExpantaNum.pow(10,6)) && ExpantaNum.lt(num,ExpantaNum.pow(10,9)) == true) {
       return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e4)),100),"M"].join("")
   }else if (ExpantaNum.gte(num,ExpantaNum.pow(10,9)) && ExpantaNum.lt(num,ExpantaNum.pow(10,12)) == true) {
