@@ -17,7 +17,7 @@ var teststat = 0
 var tokens = 0
 var isloading = 1  //1 = true 0 = false
 var unlocks = []
-var notation = "suffixes"; 
+var notation = 1; 
 
 window.onload = function() {
    Load()
@@ -39,9 +39,9 @@ window.setInterval(function() {
  },59);
 window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
-    if (notation == "suffixes") {
+    if (notation == 1) {
     document.getElementById("displayedsus").innerHTML = suffixedsus
-} else if (notation == "scientific") {
+} else if (notation == 2) {
     document.getElementById("displayedsus").innerHTML = scientificsus
 }
     document.getElementById("amogus").innerHTML = amogus
@@ -164,7 +164,7 @@ function Fixstaterror() {
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
 }
-function notation(input) {
-   notation = input
-   // notations: suffixes, scientific
+function notation(num) {
+   notation = num
+   // notations IDs: 1 = suffixes, 2 = scientific
 }
