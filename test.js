@@ -89,7 +89,8 @@ function Save() {
         sus: sus,
         amogus: amogus,
         crewmate: crewmate,
-        impostor: impostor
+        impostor: impostor,
+        lifetimesus: lifetimesus
     };
     localStorage.setItem("save", JSON.stringify(save));
 }
@@ -99,12 +100,14 @@ function Load() {
     if (typeof saveddata.amogus !== "undefined") amogus = saveddata.amogus;
     if (typeof saveddata.crewmate !== "undefined") crewmate = saveddata.crewmate;
     if (typeof saveddata.impostor !== "undefined") impostor = saveddata.impostor;
+    if (typeof saveddata.lifetimesus !== "undefined") lifetimesus = saveddata.lifetimesus;
 }
 function Restart() {
     sus = 0
     amogus = 0
     crewmate = 0
     impostor = 0
+    liftimesus = 0
     var saveddata = {};
     localStorage.setItem("saveddata", JSON.stringify(saveddata))
     location.reload();
