@@ -42,7 +42,7 @@
 // rounds to nearest 0.001*num
 function toRoundedScientific(num) {
   if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1000)) == true) {
-   return [ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.round(ExpantaNum.log10(ExpantaNum.div(num,1000))))),e,ExpantaNum.round(ExpantaNum.log10(num))].join("")
+   return [ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.round(ExpantaNum.log10(ExpantaNum.div(num,1000))))),"e",ExpantaNum.round(ExpantaNum.log10(num))].join("")
   } else {
     return num
   }
