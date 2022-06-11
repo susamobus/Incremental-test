@@ -1,7 +1,7 @@
 //file used for notations
 
 
-
+var toSuffix
 
 
  function toSuffixes(num){
