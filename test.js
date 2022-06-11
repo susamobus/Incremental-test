@@ -175,7 +175,7 @@ function Notation(num) {
    // notations IDs: 1 = suffixes, 2 = scientific
 }
 function tokens(buttonorder) {
-    let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(buttonorder,ExpantaNum.mul(tokenspage,3))),5e15)
+    let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(tokenspage,3))),5e15)
   if (ExpantaNum.gte(points,cost) == true) {
     tokens = ExpantaNum.add(tokens,ExpantaNum.pow(5,ExpantaNum.add(buttonorder,ExpantaNum.mul(tokenspage,3))))
   }
