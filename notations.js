@@ -39,10 +39,10 @@
     return num
    }
 }
-// roundpower = round to nearest roundpower decimal, 3 round power will round to nearest 0.001 or (1/1e3)
-function toRoundedScientific(num,roundpower) {
+// rounds to nearest 0.001*num
+function toRoundedScientific(num) {
   if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1000)) == true) {
-   return ExpantaNum.mul(ExpantaNum.pow(10,ExpantaNum.sub(ExpantaNum.round(ExpantaNum.log10(num)),roundpower)),ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.round(ExpantaNum.minus(ExpantaNum.log10(num),roundpower))))))).toString()
+   return [ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.round(ExpantaNum.log10(ExpantaNum.div(num,1000))))),e,ExpantaNum.round(ExpantaNum.log10(num))].join("")
   } else {
     return num
   }
