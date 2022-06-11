@@ -37,7 +37,6 @@ window.setInterval(function() {
  },59);
 window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
-    document.getElementById("sus").innerHTML = sus
     document.getElementById("suffixedsus").innerHTML = suffixedsus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
