@@ -1,1 +1,0 @@
-  add document.getElementById("sus").innerHTML = sus back if it breaks

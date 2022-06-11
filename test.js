@@ -15,6 +15,7 @@ var impostorcost = 0
 var impostorconvert = 0
 var teststat = 0
 var tokens = 0
+var tokenspage = 1
 var isloading = 1  //1 = true 0 = false
 var unlocks = []
 var notation = 1; 
@@ -32,11 +33,11 @@ window.setInterval(function() {
 }},50);
 window.setInterval(function() {
    Save()
-},250);
+},80);
 window.setInterval(function() {
     doneloading()
     Fixstaterror()
- },59);
+ },49);
 window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
     scientificsus = toRoundedScientific(sus,3)
@@ -78,7 +79,7 @@ window.setInterval(function() {
         document.getElementById("mode").innerHTML = "Buy max"
         document.getElementById("mode").style.color = "lightskyblue"
     }
-    Save()
+    unlockbuttons
 },50);
 function Amogus() { 
     if (mode == 0) {
@@ -172,4 +173,22 @@ function doneloading() {
 function Notation(num) {
    notation = num
    // notations IDs: 1 = suffixes, 2 = scientific
+}
+function tokens(buttonorder) {
+    let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(buttonorder,ExpantaNum.mul(tokenspage,3))),5e15)
+  if (ExpantaNum.gte(points,cost) == true) {
+    tokens = ExpantaNum.add(tokens,ExpantaNum.pow(5,ExpantaNum.add(buttonorder,ExpantaNum.mul(tokenspage,3))))
+  }
+
+}
+function unlock(feature,sussubtraction) {
+   if (ExpantaNum.gte(sus,sussubtraction) == true) {
+    unlocks.push(feature.toString())
+    sus = ExpantaNum.sub(sus,sussubtraction)
+   }
+}
+function unlockbuttons() {
+  if (ExpantaNum.gte(lifetimesus,5e14) == true) {
+    document.getElementsByClassName("UnlockTokensButton").style.opacity = 1
+  }
 }
