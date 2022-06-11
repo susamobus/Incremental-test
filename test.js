@@ -1,5 +1,6 @@
 var sus = 0
 var suffixedsus = 0 //(suffix converted version of sus stat, only for display purposes)
+var scientificsus = 0 //same as above but scientific
 var susgainpertick = 0
 var lifetimesus = 0
 var amogus = 0
@@ -16,7 +17,7 @@ var teststat = 0
 var tokens = 0
 var isloading = 1  //1 = true 0 = false
 var unlocks = []
-var notation = suffixes; 
+var notation = "suffixes"; 
 
 window.onload = function() {
    Load()
@@ -28,7 +29,7 @@ window.setInterval(function() {
       susgainpertick = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
       sus = ExpantaNum.floor(ExpantaNum.add(sus,susgainpertick))
       lifetimesus = ExpantaNum.floor(ExpantaNum.add(lifetimesus,susgainpertick))
-}},60);
+}},50);
 window.setInterval(function() {
    Save()
 },250);
@@ -38,7 +39,11 @@ window.setInterval(function() {
  },59);
 window.setInterval(function() {
     suffixedsus = toSuffixes(sus)
-    document.getElementById("suffixedsus").innerHTML = suffixedsus
+    if (notation == "suffixes") {
+    document.getElementById("displayedsus").innerHTML = suffixedsus
+} else if (notation == "scientific") {
+    document.getElementById("displayedsus").innerHTML = scientificsus
+}
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor
