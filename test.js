@@ -190,9 +190,9 @@ function unlock(feature,sussubtraction) {
 }
 function unlockbuttons() {
   if (ExpantaNum.gte(lifetimesus,5e14) == true) {
-    document.getElementsByClassName("UnlockTokensButton").style.opacity = 1
+    document.getElementsByClassName("UnlockTokensButton").style.visibility = hidden
   }
   if (unlocks.includes("tokens") == true) {
-    document.getElementsByClassName("TokensButtons").style.opacity = 1
+    document.getElementsByClassName("TokensButtons").style.visibility = hidden
   }
 }
