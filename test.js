@@ -190,7 +190,7 @@ function unlock(feature,sussubtraction) {
 }
 function unlockbuttons() {
   if (ExpantaNum.gte(lifetimesus,5e14) == true) {
-    document.getElementsByClassName("UnlockTokensButton").style.visibility = "hidden"
+    document.getElementsByClassName("UnlockTokensButton").style.visibility = "visible"
   }
   if (unlocks.includes("tokens") == true) {
     document.getElementsByClassName("TokensButtons").style.visibility = "visible"
