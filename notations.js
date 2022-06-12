@@ -41,7 +41,7 @@ function toSuffixes(num){
 }
 // rounds to nearest 0.001*num
 function toRoundedScientific(num) {
-  if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1000)) == true) {
+  if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,9e15)) == true) {
    return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000),"e",ExpantaNum.floor(ExpantaNum.log10(num))].join("")
   } else {
     return num
