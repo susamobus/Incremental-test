@@ -30,8 +30,8 @@
         <button class="RestartButton" onClick="Test()">Test</button>
         <button class="FixSusGainButton" onClick="doneloading()">Fix Sus Gain</button>
         <button class="UnlockTokensButton" onClick="unlock(tokens,1e15)">Unlock Tokens, require 1Qd Sus</button>
-        <button class="TokensButtons" onClick="tokens(1)">1st Token Button</button>
-        <button class="TokensButtons" onClick="tokens(2)">2nd Token Button</button>
-        <button class="TokensButtons" onClick="tokens(3)">3rd Token Button</button>
+        <button class="TokensButtons" onClick="tokens(1)"><span id="toSuffixes(getTokensCost(1))">0</span> points for <span id="toSuffixes(getTokensGain(1))">0</span></button>
+        <button class="TokensButtons" onClick="tokens(2)"><span id="toSuffixes(getTokensCost(2))">0</span> points for <span id="toSuffixes(getTokensGain(2))">0</span></button>
+        <button class="TokensButtons" onClick="tokens(3)"><span id="toSuffixes(getTokensCost(3))">0</span> points for <span id="toSuffixes(getTokensGain(3))">0</span></button>
     </body>
 </html>

@@ -180,7 +180,12 @@ function tokens(buttonorder) {
   if (ExpantaNum.gte(points,cost) == true) {
     tokens = ExpantaNum.add(tokens,ExpantaNum.pow(5,ExpantaNum.add(buttonorder,ExpantaNum.mul(tokenspage,3))))
   }
-
+}
+function getTokensCost(buttonorder) {
+    return ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1)))),5e15)
+}
+function getTokensGain(buttonorder) {
+    return ExpantaNum.mul(ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
 }
 function unlock(feature,sussubtraction) {
    if (ExpantaNum.gte(sus,sussubtraction) == true) {
@@ -190,7 +195,7 @@ function unlock(feature,sussubtraction) {
 }
 function unlockbuttons() {
   if (ExpantaNum.gte(lifetimesus,5e14) == true) {
-    document.getElementsByClassName("UnlockTokensButton").style.visibility = "visible"
+    document.getElementById("UnlockTokensButton").style.visibility = "visible"
   }
   if (unlocks.includes("tokens") == true) {
     document.getElementsByClassName("TokensButtons").style.visibility = "visible"
