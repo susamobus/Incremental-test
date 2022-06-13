@@ -40,10 +40,17 @@ function toSuffixes(num){
    }
 }
 // rounds to nearest 0.001*num
+
+// Scientific Notation Components (toEE is not useful yet)
 function toRoundedScientific(num) {
-  if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,9e15)) == true) {
+  if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1e6)) == true) {
    return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000),"e",ExpantaNum.floor(ExpantaNum.log10(num))].join("")
   } else {
     return num
   }
+  }
+  function toEE(num) {
+    if (ExpantaNum.gte(num,ExpantaNum.pow(10,ExpantaNum.pow(10,6))) && ExpantaNum.lt(num,ExpantaNum.pow(10,ExpantaNum.pow(10,1e7))) == true) {
+      return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000),"ee",ExpantaNum.log10(ExpantaNum.log10(num))].join("")
+    }
   }
