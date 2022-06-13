@@ -198,6 +198,6 @@ function unlockbuttons() {
     document.getElementById("UnlockTokensButton").style.display = "block"
   }
   if (unlocks.includes("tokens") == true) {
-    document.getElementsByClassName("TokensButtons").style.visibility = "block"
+    document.getElementsByClassName("TokensButtons").style.display = "block"
   }
 }
