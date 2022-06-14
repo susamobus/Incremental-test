@@ -41,6 +41,12 @@ window.setInterval(function() {
 window.setInterval(function() {
     displayedsus = toDisplay(sus)
     document.getElementById("displayedsus").innerHTML = displayedsus
+    if (notation == 1) {
+        document.getElementById("notation").innerHTML = "Suffixes"
+    } else if (notation == 2) {
+        document.getElementById("notation").innerHTML = "Scientific"
+    }
+    
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor
