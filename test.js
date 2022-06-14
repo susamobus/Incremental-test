@@ -1,6 +1,5 @@
 var sus = 0
-var suffixedsus = 0 //(suffix converted version of sus stat, only for display purposes)
-var scientificsus = 0 //same as above but scientific
+var displayedsus = 0 //(suffix converted version of sus stat, only for display purposes)
 var susgainpertick = 0
 var lifetimesus = 0
 var amogus = 0
@@ -40,20 +39,17 @@ window.setInterval(function() {
     Fixstaterror()
  },49);
 window.setInterval(function() {
-    suffixedsus = toSuffixes(sus)
-    scientificsus = toRoundedScientific(sus,3)
-    if (notation == 1) {
-    document.getElementById("displayedsus").innerHTML = suffixedsus
-    document.getElementById("notation").innerHTML = "suffixes"
-    document.getElementById("notation").style.color = "royalblue"
-} else if (notation == 2) {
-    document.getElementById("displayedsus").innerHTML = scientificsus
-    document.getElementById("notation").innerHTML = "scientific"
-    document.getElementById("notation").style.color = "lightsteelblue"
-}
+    displayedsus = toDisplay(sus)
+    document.getElementById("displayedsus").innerHTML = displayedsus
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor
+    document.getElementById("tokensgain1").innerHTML = toDisplay(getTokensGain(1))
+    document.getElementById("tokensgain2").innerHTML = toDisplay(getTokensGain(2))
+    document.getElementById("tokensgain3").innerHTML = toDisplay(getTokensGain(3))
+    document.getElementById("tokenscost1").innerHTML = toDisplay(getTokensCost(1))
+    document.getElementById("tokenscost2").innerHTML = toDisplay(getTokensCost(2))
+    document.getElementById("tokenscost3").innerHTML = toDisplay(getTokensCost(3))
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
@@ -175,6 +171,13 @@ function Notation(num) {
    notation = num
    // notations IDs: 1 = suffixes, 2 = scientific
 }
+function toDisplay(num) {
+  if (notation == 1) {
+    return toSuffixes(num)
+  } else if (notation == 2) {
+    return toRoundedScientific(num)
+  }
+}
 function tokens(buttonorder) {
     let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(tokenspage,3))),5e15)
   if (ExpantaNum.gte(points,cost) == true) {
@@ -195,9 +198,9 @@ function unlock(feature,sussubtraction) {
 }
 function unlockbuttons() {
   if (ExpantaNum.gte(lifetimesus,5e14) == true) {
-    document.getElementById("UnlockTokensButton").style.display = "block"
+    document.getElementById("unlocktokens").style.display = "inline"
   }
   if (unlocks.includes("tokens") == true) {
-    document.getElementsByClassName("TokensButtons").style.display = "block"
+    document.getElementsByClassName("TokensButtons").style.display = "inline"
   }
 }
