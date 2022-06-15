@@ -209,9 +209,9 @@ function unlockbuttons() {
     document.getElementById("unlocktokens").style.display = "inline"
   }
   if (unlocks.includes("tokens") == true) {
-    let tokenbuttons = document.getElementsByClassName("TokensButtons").style.display
-    tokensbuttons[0].style.display = "inline"
-    tokensbuttons[1].style.display = "inline"
-    tokensbuttons[2].style.display = "inline"
+    document.getElementById("tokensbutton1").style.display = "inline"
+    document.getElementById("tokensbutton2").style.display = "inline"
+    document.getElementById("tokensbutton3").style.display = "inline"
+
   }
 }
