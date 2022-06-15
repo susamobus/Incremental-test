@@ -198,15 +198,17 @@ function getTokensCost(buttonorder) {
 function getTokensGain(buttonorder) {
     return ExpantaNum.mul(ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),1)
 }
-function unlock(feature,sussubtraction) {
+function unlock(feature,sussubtraction) { // IMPORTANT: FEATURE PARAMATER NEEDS TO BE STRING
    if (ExpantaNum.gte(sus,sussubtraction) == true) {
-    unlocks[unlocks.length] = feature.toString()
+    unlocks[unlocks.length] = feature
     sus = ExpantaNum.sub(sus,sussubtraction)
    }
 }
 function unlockbuttons() {
-  if (ExpantaNum.gte(lifetimesus,5e14) == true) {
+  if (ExpantaNum.gte(lifetimesus,5e14) == true && unlocks.includes("tokens") !== true) {
     document.getElementById("unlocktokens").style.display = "inline"
+  } else {
+    document.getElementById("unlocktokens").style.display = "none"
   }
   if (unlocks.includes("tokens") == true) {
     document.getElementById("tokensbutton1").style.display = "inline"
