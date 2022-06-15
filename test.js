@@ -210,7 +210,7 @@ function unlockbuttons() {
   } else {
     document.getElementById("unlocktokens").style.display = "none"
   }
-  if (unlocks.includes("tokensfeature") == true) {
+  if (unlocks.includes("tokens") == true) {
     document.getElementById("tokensbutton1").style.display = "inline"
     document.getElementById("tokensbutton2").style.display = "inline"
     document.getElementById("tokensbutton3").style.display = "inline"
