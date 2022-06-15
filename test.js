@@ -43,8 +43,10 @@ window.setInterval(function() {
     document.getElementById("displayedsus").innerHTML = displayedsus
     if (notation == 1) {
         document.getElementById("notation").innerHTML = "Suffixes"
+        document.getElementById("notation").style.color = "royalblue"
     } else if (notation == 2) {
         document.getElementById("notation").innerHTML = "Scientific"
+        document.getElementById("notation").style.color = "lightsteelblue"
     }
     
     document.getElementById("amogus").innerHTML = amogus
@@ -198,7 +200,7 @@ function getTokensGain(buttonorder) {
 }
 function unlock(feature,sussubtraction) {
    if (ExpantaNum.gte(sus,sussubtraction) == true) {
-    unlocks.push(feature.toString())
+    unlocks[unlocks.length] = feature.toString()
     sus = ExpantaNum.sub(sus,sussubtraction)
    }
 }
