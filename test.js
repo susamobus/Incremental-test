@@ -205,12 +205,12 @@ function unlock(feature,sussubtraction) { // IMPORTANT: FEATURE PARAMATER NEEDS 
    }
 }
 function unlockbuttons() {
-  if (ExpantaNum.gte(lifetimesus,5e14) == true && unlocks.includes("tokens") !== true) {
+  if ((ExpantaNum.gte(lifetimesus,5e14) == true) && (unlocks.includes("tokens") !== true) == true) {
     document.getElementById("unlocktokens").style.display = "inline"
   } else {
     document.getElementById("unlocktokens").style.display = "none"
   }
-  if (unlocks.includes("tokens") == true) {
+  if (unlocks.includes("tokensfeature") == true) {
     document.getElementById("tokensbutton1").style.display = "inline"
     document.getElementById("tokensbutton2").style.display = "inline"
     document.getElementById("tokensbutton3").style.display = "inline"
