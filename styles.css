@@ -118,6 +118,16 @@ body {
     width: 144px;
     display: none;
 }
+.TokensText2 {
+    color: rgb(255, 196, 0);
+    font-size: 20px;
+    display:none;
+}
+.TokensText1 {
+    color: black;
+    font-size: 20px;
+    display: none;
+}
 .TokensButtons {
     background-color: rgb(255, 196, 0);
     color: black;
