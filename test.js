@@ -52,7 +52,7 @@ window.setInterval(function() {
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor
-    document.getElementById("tokens").innerHTML = toDisplay(tokens)
+    document.getElementById("TokensText2").innerHTML = toDisplay(tokens)
     document.getElementById("tokensgain1").innerHTML = toDisplay(getTokensGain(1))
     document.getElementById("tokensgain2").innerHTML = toDisplay(getTokensGain(2))
     document.getElementById("tokensgain3").innerHTML = toDisplay(getTokensGain(3))
