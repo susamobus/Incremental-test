@@ -108,7 +108,9 @@ function Save() {
         amogus: amogus,
         crewmate: crewmate,
         impostor: impostor,
-        lifetimesus: lifetimesus
+        lifetimesus: lifetimesus,
+        unlocks: unlocks,
+        tokens: tokens
     };
     localStorage.setItem("save", JSON.stringify(save));
 }
@@ -169,9 +171,11 @@ function Fixstaterror() {
     amogus = ExpantaNum.add(amogus,0.000001)
     crewmate = ExpantaNum.add(crewmate,0.000001)
     impostor = ExpantaNum.add(impostor,0.000001)
+    tokens = ExpantaNum.add(tokens,0.000001)
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
+    tokens = ExpantaNum.floor(tokens)
 }
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
@@ -191,6 +195,7 @@ function addtokens(buttonorder) {
     let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
   if (ExpantaNum.gte(sus,cost) == true) {
     tokens = ExpantaNum.add(tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))))
+    sus = ExpantaNum.sub(sus,cost)
   }
 }
 function getTokensCost(buttonorder) {
@@ -217,5 +222,6 @@ function unlockbuttons() {
     document.getElementById("tokensbutton3").style.display = "inline"
     document.getElementById("tokenstext1").style.display = "inline"
     document.getElementById("tokenstext2").style.display = "inline"
+    document.getElementById("tokensupgradespanel").style.display = "inline"
   }
 }
