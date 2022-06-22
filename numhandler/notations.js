@@ -1,8 +1,8 @@
 //file used for notations
 
+var notationfuncs = {
 
-
-function toSuffixes(num){
+toSuffixes : function(num){
   if (ExpantaNum.gte(num,ExpantaNum.pow(10,6)) && ExpantaNum.lt(num,ExpantaNum.pow(10,9)) == true) {
       return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e4)),100),"M"].join("")
   }else if (ExpantaNum.gte(num,ExpantaNum.pow(10,9)) && ExpantaNum.lt(num,ExpantaNum.pow(10,12)) == true) {
@@ -38,19 +38,28 @@ function toSuffixes(num){
   else if (ExpantaNum.lt(num,ExpantaNum.pow(10,6))) {
     return num
    }
-}
-// rounds to nearest 0.001*num
-
-// Scientific Notation Components (toEE is not useful yet)
-function toRoundedScientific(num) {
+},
+toRoundedScientific : function(num) {
   if (ExpantaNum.gte(num,1e3) && ExpantaNum.lt(num,ExpantaNum.pow(10,1e6)) == true) {
-   return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000),"e",ExpantaNum.floor(ExpantaNum.log10(num))].join("")
+   return [notationfuncs.getMantissa(num),"e",notationfuncs.getLogarithm(num,true)].join("")
   } else {
     return num
   }
-  }
-  function toEE(num) {
-    if (ExpantaNum.gte(num,ExpantaNum.pow(10,ExpantaNum.pow(10,6))) && ExpantaNum.lt(num,ExpantaNum.pow(10,ExpantaNum.pow(10,1e7))) == true) {
-      return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000),"ee",ExpantaNum.log10(ExpantaNum.log10(num))].join("")
+  },
+  toEE : function(num) {
+    if (ExpantaNum.gte(num,ExpantaNum.pow(10,ExpantaNum.pow(10,6))) && ExpantaNum.lt(num,ExpantaNum.pow(10,ExpantaNum.pow(10,1e6))) == true) {
+      return [notationfuncs.getMantissa(num),"ee",notationfuncs.getLogarithm(notationfuncs.getLogarithm(num,false),false)].join("")
     }
-  }
+  },
+  getMantissa : function(num) {
+    return ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,ExpantaNum.pow(10,ExpantaNum.floor(ExpantaNum.log10(ExpantaNum.div(num,1000)))))),1000)
+ },
+  getLogarithm : function(num,isrounded) {
+  if (isrounded == true) {
+  return ExpantaNum.floor(ExpantaNum.log10(num))
+ }
+ if (isrounded == false) {
+  return ExpantaNum.log10(num)
+ }
+}
+}

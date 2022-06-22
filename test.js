@@ -1,5 +1,5 @@
 var sus = 0
-var displayedsus = 0 //(suffix converted version of sus stat, only for display purposes)
+var displayedsus = 0 //the displayed sus based on the notation
 var susgainpertick = 0
 var lifetimesus = 0
 var amogus = 0
@@ -13,8 +13,7 @@ var impostor = 0
 var impostorcost = 0
 var impostorconvert = 0
 var teststat = 0
-var tokens = 0
-var tokenspage = 1
+var upgradepanelactive = 'none'
 var isloading = 1  //1 = true 0 = false
 var unlocks = []
 var notation = 1; 
@@ -26,13 +25,12 @@ window.onload = function() {
 };
 window.setInterval(function() {
     if (isloading == 0){
-      susgainpertick = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1))))
+      susgainpertick = ExpantaNum.floor(ExpantaNum.mul(tokentotalboosts.sus,ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(impostor,2),1),ExpantaNum.mul(ExpantaNum.add(ExpantaNum.div(crewmate,2),1),ExpantaNum.add(amogus,1)))))
       sus = ExpantaNum.floor(ExpantaNum.add(sus,susgainpertick))
       lifetimesus = ExpantaNum.floor(ExpantaNum.add(lifetimesus,susgainpertick))
-      unlockbuttons()
 }},50);
 window.setInterval(function() {
-   Save()
+   saveandload.Save()
 },80);
 window.setInterval(function() {
     doneloading()
@@ -52,17 +50,17 @@ window.setInterval(function() {
     document.getElementById("amogus").innerHTML = amogus
     document.getElementById("crewmate").innerHTML = crewmate
     document.getElementById("impostor").innerHTML = impostor
-    document.getElementById("tokenstext2").innerHTML = toDisplay(tokens)
-    document.getElementById("tokensgain1").innerHTML = toDisplay(getTokensGain(1))
-    document.getElementById("tokensgain2").innerHTML = toDisplay(getTokensGain(2))
-    document.getElementById("tokensgain3").innerHTML = toDisplay(getTokensGain(3))
-    document.getElementById("tokenscost1").innerHTML = toDisplay(getTokensCost(1))
-    document.getElementById("tokenscost2").innerHTML = toDisplay(getTokensCost(2))
-    document.getElementById("tokenscost3").innerHTML = toDisplay(getTokensCost(3))
+    document.getElementById("tokenstext2").innerHTML = toDisplay(tokenvars.tokens)
+    document.getElementById("tokensgain1").innerHTML = toDisplay(tokenfuncs.getTokensGain(1))
+    document.getElementById("tokensgain2").innerHTML = toDisplay(tokenfuncs.getTokensGain(2))
+    document.getElementById("tokensgain3").innerHTML = toDisplay(tokenfuncs.getTokensGain(3))
+    document.getElementById("tokenscost1").innerHTML = toDisplay(tokenfuncs.getTokensCost(1))
+    document.getElementById("tokenscost2").innerHTML = toDisplay(tokenfuncs.getTokensCost(2))
+    document.getElementById("tokenscost3").innerHTML = toDisplay(tokenfuncs.getTokensCost(3))
     amoguscost = ExpantaNum.mul(ExpantaNum.add(amogus,1),5)
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
-    crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpantaNum.add(impostor,1)))
+    crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(tokentotalboosts.crewmate,ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpantaNum.add(impostor,1))))
     impostorcost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.5,impostor),12.5),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10)
     impostorconvert = ExpantaNum.floor(ExpantaNum.div(crewmate,impostorcost))
     if (mode == 0) {
@@ -85,7 +83,6 @@ window.setInterval(function() {
         document.getElementById("mode").innerHTML = "Buy max"
         document.getElementById("mode").style.color = "lightskyblue"
     }
-    unlockbuttons
 },50);
 function Amogus() { 
     if (mode == 0) {
@@ -101,26 +98,6 @@ function Amogus() {
 ;}
 function Mode(number) {
     mode = number
-}
-function Save() {
-    var save = {
-        sus: sus,
-        amogus: amogus,
-        crewmate: crewmate,
-        impostor: impostor,
-        lifetimesus: lifetimesus,
-        unlocks: unlocks,
-        tokens: tokens
-    };
-    localStorage.setItem("save", JSON.stringify(save));
-}
-function Load() {
-    var saveddata = JSON.parse(localStorage.getItem("save"));
-    if (typeof saveddata.sus !== "undefined") sus = saveddata.sus;
-    if (typeof saveddata.amogus !== "undefined") amogus = saveddata.amogus;
-    if (typeof saveddata.crewmate !== "undefined") crewmate = saveddata.crewmate;
-    if (typeof saveddata.impostor !== "undefined") impostor = saveddata.impostor;
-    if (typeof saveddata.lifetimesus !== "undefined") lifetimesus = saveddata.lifetimesus;
 }
 function Restart() {
     sus = 0
@@ -171,11 +148,11 @@ function Fixstaterror() {
     amogus = ExpantaNum.add(amogus,0.000001)
     crewmate = ExpantaNum.add(crewmate,0.000001)
     impostor = ExpantaNum.add(impostor,0.000001)
-    tokens = ExpantaNum.add(tokens,0.000001)
+    tokenvars.tokens = ExpantaNum.add(tokenvars.tokenstokens,0.000001)
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
-    tokens = ExpantaNum.floor(tokens)
+    tokenvars.tokens = ExpantaNum.floor(tokenvars.tokens)
 }
 function doneloading() {
     isloading = ExpantaNum.mul(isloading,0)
@@ -186,42 +163,22 @@ function Notation(num) {
 }
 function toDisplay(num) {
   if (notation == 1) {
-    return toSuffixes(num)
+    return notationfuncs.toSuffixes(num)
   } else if (notation == 2) {
-    return toRoundedScientific(num)
+    return notationfuncs.toRoundedScientific(num)
   }
 }
-function addtokens(buttonorder) {
-    let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
-  if (ExpantaNum.gte(sus,cost) == true) {
-    tokens = ExpantaNum.add(tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))))
-    sus = ExpantaNum.sub(sus,cost)
-  }
-}
-function getTokensCost(buttonorder) {
-    return ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
-}
-function getTokensGain(buttonorder) {
-    return ExpantaNum.mul(ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),1)
-}
+
 function unlock(feature,sussubtraction) { // IMPORTANT: FEATURE PARAMATER NEEDS TO BE STRING
    if (ExpantaNum.gte(sus,sussubtraction) == true) {
     unlocks[unlocks.length] = feature
     sus = ExpantaNum.sub(sus,sussubtraction)
    }
 }
-function unlockbuttons() {
-  if ((ExpantaNum.gte(lifetimesus,5e14) == true) && (unlocks.includes("tokens") !== true) == true) {
-    document.getElementById("unlocktokens").style.display = "inline"
+function upgradepanel(feature) { //again, feature param MUST BE STRING 
+  if (upgradepanelactive !== feature) {
+    upgradepanelactive = feature
   } else {
-    document.getElementById("unlocktokens").style.display = "none"
-  }
-  if (unlocks.includes("tokens") == true) {
-    document.getElementById("tokensbutton1").style.display = "inline"
-    document.getElementById("tokensbutton2").style.display = "inline"
-    document.getElementById("tokensbutton3").style.display = "inline"
-    document.getElementById("tokenstext1").style.display = "inline"
-    document.getElementById("tokenstext2").style.display = "inline"
-    document.getElementById("tokensupgradespanel").style.display = "inline"
+    upgradepanelactive = "none"
   }
 }

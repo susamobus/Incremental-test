@@ -4,15 +4,17 @@
         <link rel="stylesheet" type="text/css" href="styles.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
         <script type="text/javascript" src="test.js"></script>
-        <script src="ExpantaNum.js"></script>
-        <script src="notations.js"></script>
+        <script src="numhandler/ExpantaNum.js"></script>
+        <script src="numhandler/notations.js"></script>
+        <script src="features/tokens.js"></script>
+        <script src="mechanics/saveandload.js"></script>
         <style>
             body {
   font-family: "Dosis", sans-serif;
             }
         </style>
     </head>
-    <body onload="Load()">
+    <body onload = "saveandload.Load()">
         <button class="SelectButton1" onClick="Mode(0)">Convert 1 each</button>
         <button class="SelectButton2" onClick="Mode(1)">Convert all at once</button>
         <button class="NotationButton1" onClick="Notation(1)">Suffixes Notation</button>
@@ -31,9 +33,18 @@
         <button class="FixSusGainButton" onClick="doneloading()">Fix Sus Gain</button>
         <button id = "unlocktokens" class="UnlockTokensButton" onClick="unlock('tokens',1e15)">Unlock Tokens, require 1Qd Sus</button>
         <p><span id = tokenstext1 class = TokensText1>Tokens :</span><span class="TokensText2" id="tokenstext2">tokens</span></p>
-        <button id = "tokensbutton1" class="TokensButtons" onClick="addtokens(1)"><span id="tokenscost1">0</span> sus for <span id="tokensgain1">0</span> tokens</button>
-        <button id = "tokensbutton2" class="TokensButtons" onClick="addtokens(2)"><span id="tokenscost2">0</span> sus for <span id="tokensgain2">0</span> tokens</button>
-        <button id = "tokensbutton3" class="TokensButtons" onClick="addtokens(3)"><span id="tokenscost3">0</span> sus for <span id="tokensgain3">0</span> tokens</button>
-        <div class = "TokensUpgradesPanel" id = "tokensupgradespanel"> Token Upgrades </div>
+        <button id = "tokensbutton1" class="TokensButtons" onClick="tokenfuncs.addtokens(1)"><span id="tokenscost1">0</span> sus for <span id="tokensgain1">0</span> tokens</button>
+        <button id = "tokensbutton2" class="TokensButtons" onClick="tokenfuncs.addtokens(2)"><span id="tokenscost2">0</span> sus for <span id="tokensgain2">0</span> tokens</button>
+        <button id = "tokensbutton3" class="TokensButtons" onClick="tokenfuncs.addtokens(3)"><span id="tokenscost3">0</span> sus for <span id="tokensgain3">0</span> tokens</button>
+        <button id = "pagebuttonF" class="TokenPageButtons" onClick="tokenfuncs.addpage(1)">Forward Page</button>
+        <button id = "pagebuttonB" class="TokenPageButtons" onClick="tokenfuncs.addpage(-1)">Backward Page</button>
+        <button class = "ShowTokensUpgradesPanel" onClick="upgradepanel('tokens')">Upgrades</button>
+        <div class = "TokensUpgradesPanel" id = "tokensupgradespanel"><h1>Token Upgrades</h1>
+        <button class = "TokensUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1)">Unlock Token Pages<br>Require 200 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',2)">Unlock Token Pages<br>Require 200 Tokens</button>
+        <button class = "TokensUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',3)">Unlock Token Pages<br>Require 200 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2)">Unlock Token Pages<br>Require 200 Tokens</button>
+    </div>
+
     </body>
 </html>
