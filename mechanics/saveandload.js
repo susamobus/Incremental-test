@@ -13,7 +13,7 @@ Save : function() {
         },
      tokensfeature : {
         tokens: tokenvars.tokens,
-        tokenupgrades = tokenvars.upgrades
+        tokenupgrades : tokenvars.upgrades
         },
       unlocked : {
         unlocks: unlocks
@@ -30,4 +30,5 @@ Load : function() {
     if (typeof saveddata.mainlayers.lifetimesus !== "undefined") lifetimesus = saveddata.mainlayers.lifetimesus;
     if (typeof saveddata.unlocked.unlocks !== "undefined") unlocks = saveddata.unlocked.unlocks;
     if (typeof saveddata.tokensfeature.tokens !== "undefined") tokenvars.tokens = saveddata.tokensfeature.tokens;
+    if (typeof saveddata.tokensfeature.tokenupgrades !== "undefined") tokenvars.tokensupgrades = saveddata.tokensfeature.tokenupgrades;
 }}

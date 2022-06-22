@@ -65,7 +65,7 @@ var tokenfuncs = {
 var tokenvars = {
   tokens = 0,
   tokenspage = 1,
-  tokensupgrades = {boughtonce = [], boughtmore = {moresus1 : 0, morecrewmate1 : 0}, upgradeunlocks = []}
+  tokensupgrades = {boughtonce : [], boughtmore : {moresus1 : 0, morecrewmate1 : 0}, upgradeunlocks : []}
 }
 var tokentotalboosts = {
   tokens = 1,
