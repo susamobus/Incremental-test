@@ -33,7 +33,7 @@ toSuffixes : function(num){
     return [ExpantaNum.div(ExpantaNum.round(ExpantaNum.div(num,1e31)),100),"De"].join("")
   }
   else if (ExpantaNum.gte(num,ExpantaNum.pow(10,36))) {
-   return toRoundedScientific(num)
+   return notationfuncs.toRoundedScientific(num)
   }
   else if (ExpantaNum.lt(num,ExpantaNum.pow(10,6))) {
     return num
