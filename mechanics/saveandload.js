@@ -31,4 +31,16 @@ Load : function() {
     if (typeof saveddata.unlocked.unlocks !== "undefined") unlocks = saveddata.unlocked.unlocks;
     if (typeof saveddata.tokensfeature.tokens !== "undefined") tokenvars.tokens = saveddata.tokensfeature.tokens;
     if (typeof saveddata.tokensfeature.tokenupgrades !== "undefined") tokenvars.tokensupgrades = saveddata.tokensfeature.tokenupgrades;
+},
+Restart : function() {
+  sus = 0
+  amogus = 0
+  crewmate = 0
+  impostor = 0
+  liftimesus = 0
+  tokenvars.tokens = 0
+  token
+  saveddata = {};
+  localStorage.setItem("saveddata", JSON.stringify(saveddata))
+  location.reload();
 }}

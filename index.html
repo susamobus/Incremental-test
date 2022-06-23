@@ -28,7 +28,7 @@
         <p>Crewmate : <span class="CrewmateText" id="crewmate">crewmate</span></p>
         <button class="ImpostorButton" onClick="Impostor()">Reset all crewmate for <span id="impostoramount">0</span> impostor. Requires <span id="impostorcost">0</span></button>
         <p>Impostor : <span class="ImpostorText" id="impostor">impostor</span></p>
-        <button class="RestartButton" onClick="Restart()">Reset Progress</button>
+        <button class="RestartButton" onClick="saveandload.Restart()">Reset Progress</button>
         <button class="RestartButton" onClick="Test()">Test</button>
         <button class="FixSusGainButton" onClick="doneloading()">Fix Sus Gain</button>
         <button id = "unlocktokens" class="UnlockTokensButton" onClick="unlock('tokens',1e15)">Unlock Tokens, require 1Qd Sus</button>
@@ -40,10 +40,10 @@
         <button id = "pagebuttonB" class="TokenPageButtons" onClick="tokenfuncs.addpage(-1)">Backward Page</button>
         <button class = "ShowTokensUpgradesPanel" onClick="upgradepanel('tokens')">Upgrades</button>
         <div class = "TokensUpgradesPanel" id = "tokensupgradespanel"><h1>Token Upgrades</h1>
-        <button class = "TokensUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1)">Unlock Token Pages<br>Require 200 Tokens</button>
-        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',2)">Unlock Token Pages<br>Require 200 Tokens</button>
-        <button class = "TokensUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',3)">Unlock Token Pages<br>Require 200 Tokens</button>
-        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2)">Unlock Token Pages<br>Require 200 Tokens</button>
+        <button class = "TokensUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1)">Unlock Token Pages<br>Cost: 200 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',2)">1.6x more sus<br>Cost: 160 Tokens</button>
+        <button class = "TokensUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',3)">Unlock Token Pages<br>Cost: 1000 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2)">1.2x more crewmate<br>Cost: 1000 Tokens</button>
     </div>
 
     </body>

@@ -15,7 +15,7 @@ var tokenfuncs = {
      addtokens : function(buttonorder) {
         let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
       if (ExpantaNum.gte(sus,cost) == true) {
-        tokens = ExpantaNum.add(tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))))
+        tokenvars.tokens = ExpantaNum.add(tokenvars.tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))))
         sus = ExpantaNum.sub(sus,cost)
       }
     },
@@ -63,16 +63,16 @@ var tokenfuncs = {
 }
 
 var tokenvars = {
-  tokens = 0,
-  tokenspage = 1,
-  tokensupgrades = {boughtonce : [], boughtmore : {moresus1 : 0, morecrewmate1 : 0}, upgradeunlocks : []}
+  tokens : 0,
+  tokenspage : 1,
+  tokensupgrades : {boughtonce : [], boughtmore : {moresus1 : 0, morecrewmate1 : 0}, upgradeunlocks : []}
 }
 var tokentotalboosts = {
-  tokens = 1,
-  sus = 1,
-  amogus = 1,
-  crewmate = 1,
-  impostor = 1
+  tokens : 1,
+  sus : 1,
+  amogus : 1,
+  crewmate : 1,
+  impostor : 1
 }
 
 window.setInterval(function() {

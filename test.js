@@ -99,17 +99,6 @@ function Amogus() {
 function Mode(number) {
     mode = number
 }
-function Restart() {
-    sus = 0
-    amogus = 0
-    crewmate = 0
-    impostor = 0
-    liftimesus = 0
-    var saveddata = {};
-    localStorage.setItem("saveddata", JSON.stringify(saveddata))
-    location.reload();
-
-}
 function Crewmate() {
     if (mode == 0) {
     if (ExpantaNum.gte(amogus,crewmatecost) == true) {
