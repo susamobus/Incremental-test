@@ -13,7 +13,7 @@ var tokenfuncs = {
         }
       },
      addtokens : function(buttonorder) {
-        let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
+        let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),5e15)
       if (ExpantaNum.gte(sus,cost) == true) {
         tokenvars.tokens = ExpantaNum.add(tokenvars.tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))))
         sus = ExpantaNum.sub(sus,cost)
@@ -77,4 +77,5 @@ var tokentotalboosts = {
 
 window.setInterval(function() {
   tokenfuncs.tokenbuttonsrefresh()
+  tokenfuncs.tokenboostsrefresh()
 },50);
