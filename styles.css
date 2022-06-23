@@ -138,14 +138,24 @@ body {
     width: 112px;
     display: none;
 }
+.ShowTokensUpgradePanel {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
 .TokensUpgradesPanel {
     background-color: rgb(89, 89, 89);
     border-color: rgb(255, 196, 0);
     padding: 10px;
     border-radius: 10px;
     font-size: 10px;
-    height: 375px;
-    width: 550px;
+    height: 620px;
+    width: 750px;
     display: none;
 }
 .TokensUpgradeButton1 {

@@ -20,10 +20,10 @@ var tokenfuncs = {
       }
     },
     getTokensCost : function(buttonorder) {
-        return ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),5e15)
+        return ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),5e15)
     },
     getTokensGain : function(buttonorder) {
-        return ExpantaNum.mul(ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenspage,1),3))),1)
+        return ExpantaNum.mul(ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),1)
     },
     addpage : function(increment) {
       if ((increment == -1 && tokenvars.tokenspage == 1) !== true) {
