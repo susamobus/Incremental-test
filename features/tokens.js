@@ -47,6 +47,7 @@ var tokenfuncs = {
         document.getElementById("tokensupgradespanel").style.display = "none"    
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
+          document.getElementsByClassName("ShowTokensUpgradesPanel")[1].style.display = "inline"
           document.getElementsByClassName("TokenPageButtons")[1].style.display = "inline"
           document.getElementsByClassName("TokenPageButtons")[2].style.display = "inline"
           document.getElementsByClassName("TokensUpgradeButtons")[1].style.display = "none"
