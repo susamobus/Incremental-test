@@ -137,7 +137,7 @@ function Fixstaterror() {
     amogus = ExpantaNum.add(amogus,0.000001)
     crewmate = ExpantaNum.add(crewmate,0.000001)
     impostor = ExpantaNum.add(impostor,0.000001)
-    tokenvars.tokens = ExpantaNum.add(tokenvars.tokenstokens,0.000001)
+    tokenvars.tokens = ExpantaNum.add(tokenvars.tokens,0.000001)
     amogus = ExpantaNum.floor(amogus)
     crewmate = ExpantaNum.floor(crewmate)
     impostor = ExpantaNum.floor(impostor)
