@@ -41,20 +41,20 @@ var tokenfuncs = {
         document.getElementById("tokensbutton3").style.display = "inline"
         document.getElementById("tokenstext1").style.display = "inline"
         document.getElementById("tokenstext2").style.display = "inline"
-        document.getElementsByClassName("ShowTokensUpgradesPanel")[1].style.display = "inline"
+        document.getElementsByClassName("ShowTokensUpgradesPanel")[0].style.display = "inline"
       if (upgradepanelactive == "tokens") {
         document.getElementById("tokensupgradespanel").style.display = "inline"
         } else {
         document.getElementById("tokensupgradespanel").style.display = "none"    
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
+          document.getElementsByClassName("TokenPageButtons")[0].style.display = "inline"
           document.getElementsByClassName("TokenPageButtons")[1].style.display = "inline"
-          document.getElementsByClassName("TokenPageButtons")[2].style.display = "inline"
-          document.getElementsByClassName("TokensUpgradeButtons")[1].style.display = "none"
+          document.getElementsByClassName("TokensUpgradeButtons")[0].style.display = "none"
         }
         if (tokenvars.tokensupgrades.upgradeunlocks.includes("unlock1")) {
-          document.getElementsByClassName("TokensBuyableButtons")[2].style.display = "inline"
-          document.getElementsByClassName("TokensUnlockButtons")[1].style.display = "none"
+          document.getElementsByClassName("TokensBuyableButtons")[1].style.display = "inline"
+          document.getElementsByClassName("TokensUnlockButtons")[0].style.display = "none"
         }
     }},
     tokenboostsrefresh : function() {
