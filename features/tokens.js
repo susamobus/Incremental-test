@@ -1,15 +1,18 @@
 var tokenfuncs = {
 
 
-    tokensupgrading : function(upgradeid,type) { // Type ID | 1 = Upgrades | 2 = Buyables | 3 = Upgrade Unlockers
-        if (type == 1) {
-          tokensupgrades.boughtonce[tokensupgrades.boughtonce.length] = upgradeid
+    tokensupgrading : function(upgradeid = "",type = Number,basecost ,scaling) { // Type ID | 1 = Upgrades | 2 = Buyables | 3 = Upgrade Unlockers
+        if ((type == 1) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
+          tokenvars.tokensupgrades.boughtonce[tokenvars.tokensupgrades.boughtonce.length] = upgradeid
+          tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
         }
-        if (type == 2) {
-          tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokensupgrades.boughtmore[upgradeid],1)
+        if ((type == 2) && (ExpantaNum.gte(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))) == true) {
+          tokenvars.tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokenvars.tokensupgrades.boughtmore[upgradeid],1)
+          tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))
         }
-        if (type == 3) {
-          tokensupgrades.upgradeunlocks[tokensupgrades.upgradeunlocks.length] = upgradeid
+        if ((type == 3) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
+          tokenvars.tokensupgrades.upgradeunlocks[tokenvars.tokensupgrades.upgradeunlocks.length] = upgradeid
+          tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
         }
       },
      addtokens : function(buttonorder) {

@@ -39,11 +39,12 @@
         <button id = "pagebuttonF" class="TokenPageButtons" onClick="tokenfuncs.addpage(1)">Forward Page</button>
         <button id = "pagebuttonB" class="TokenPageButtons" onClick="tokenfuncs.addpage(-1)">Backward Page</button>
         <button class = "ShowTokensUpgradesPanel" onClick="upgradepanel('tokens')">Upgrades</button>
+        <br>
         <div class = "TokensUpgradesPanel" id = "tokensupgradespanel"><h1>Token Upgrades</h1>
-        <button class = "TokensUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1)">Unlock Token Pages<br>Cost: 200 Tokens</button>
-        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',2)">1.6x more sus<br>Cost: 160 Tokens</button>
-        <button class = "TokensUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',3)">Unlock Token Pages<br>Cost: 1000 Tokens</button>
-        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2)">1.2x more crewmate<br>Cost: 1000 Tokens</button>
+        <button class = "TokensUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1,200)">Unlock Token Pages<br>Cost: 200 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',2,150,2)">1.6x more sus<br>Cost: 150 Tokens</button>
+        <button class = "TokensUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',3,1000)">Unlock Token Pages<br>Cost: 1000 Tokens</button>
+        <button class = "TokensBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2,1000,2.5)">1.2x more crewmate<br>Cost: <span></span> Tokens</button>
     </div>
 
     </body>
