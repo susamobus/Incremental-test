@@ -158,16 +158,6 @@ body {
     width: 750px;
     display: none;
 }
-.TokensUpgradeButton1 {
-    background-color: rgb(255, 196, 0);
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 10px;
-    height: 100px;
-    width: 112px;
-    display: none;
-}
 .TokenPageButtons {
     background-color: rgb(255, 196, 0);
     color: black;
