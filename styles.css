@@ -121,12 +121,12 @@ body {
 .TokensText2 {
     color: rgb(255, 196, 0);
     font-size: 20px;
-    display:none;
+    display: none;
 }
 .TokensPanelHeader {
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    display:none;
+    font-size: 21px;
+    display: none;
 }
 .TokensText1 {
     color: white;
