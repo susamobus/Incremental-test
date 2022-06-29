@@ -45,7 +45,7 @@ var tokenfuncs = {
         document.getElementById("tokenstext1").style.display = "inline"
         document.getElementById("tokenstext2").style.display = "inline"
         document.getElementsByClassName("buyablescosttext")[0].innerHTML = ExpantaNum.mul(100,ExpantaNum.pow(2,tokenvars.tokensupgrades.boughtmore["moresus1"]))
-        document.getElementsByClassName("buyablescosttext")[0].innerHTML = ExpantaNum.mul(1000,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))
+        document.getElementsByClassName("buyablescosttext")[1].innerHTML = ExpantaNum.mul(1000,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))
         document.getElementsByClassName("ShowTokensUpgradesPanel")[0].style.display = "inline"
       if (upgradepanelactive == "tokens") {
         document.getElementById("tokensupgradespanel").style.display = "inline"
