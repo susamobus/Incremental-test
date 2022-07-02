@@ -50,9 +50,11 @@ var tokenfuncs = {
       if (upgradepanelactive == "tokens") {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "inline"
         document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"
+        document.getElementsByClassName("TokenBuyableButtons")[1].style.display = "inline"
         } else {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "none" 
-        document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"  
+        document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"
+        document.getElementsByClassName("TokenBuyableButtons")[1].style.display = "inline"  
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
           document.getElementsByClassName("TokenPageButtons")[0].style.display = "inline"
