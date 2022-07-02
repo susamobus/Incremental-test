@@ -7,8 +7,8 @@ var tokenfuncs = {
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
         }
         if ((type == 2) && (ExpantaNum.gte(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))) == true) {
-          tokenvars.tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokenvars.tokensupgrades.boughtmore[upgradeid],1)
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))
+          tokenvars.tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokenvars.tokensupgrades.boughtmore[upgradeid],1)
         }
         if ((type == 3) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
           tokenvars.tokensupgrades.upgradeunlocks[tokenvars.tokensupgrades.upgradeunlocks.length] = upgradeid
