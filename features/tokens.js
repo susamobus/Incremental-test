@@ -48,9 +48,9 @@ var tokenfuncs = {
         document.getElementsByClassName("buyablescosttext")[1].innerHTML = ExpantaNum.mul(1000,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))
         document.getElementsByClassName("ShowTokensUpgradesPanel")[0].style.display = "inline"
       if (upgradepanelactive == "tokens") {
-        document.getElementById("TokenUpgradesPanel").style.display = "inline"
+        document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "inline"
         } else {
-        document.getElementById("TokenUpgradesPanel").style.display = "none"    
+        document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "none"    
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
           document.getElementsByClassName("TokenPageButtons")[0].style.display = "inline"
