@@ -50,16 +50,20 @@ var tokenfuncs = {
       if (upgradepanelactive == "tokens") {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "inline"
         } else {
-        document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "none"    
+        document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "none"   
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
           document.getElementsByClassName("TokenPageButtons")[0].style.display = "inline"
           document.getElementsByClassName("TokenPageButtons")[1].style.display = "inline"
           document.getElementsByClassName("TokensUpgradeButtons")[0].style.display = "none"
+        } else {
+          document.getElementsByClassName("TokensUpgradeButtons")[0].style.display = "inline"
         }
         if (tokenvars.tokensupgrades.upgradeunlocks.includes("unlock1")) {
           document.getElementsByClassName("TokensBuyableButtons")[1].style.display = "inline"
           document.getElementsByClassName("TokensUnlockButtons")[0].style.display = "none"
+        } else {
+          document.getElementsByClassName("TokensUnlockButtons")[0].style.display = "inline"
         }
     }},
     tokenboostsrefresh : function() {
