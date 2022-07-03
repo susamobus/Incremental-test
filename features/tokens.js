@@ -1,19 +1,23 @@
 var tokenfuncs = {
 
 
-    tokensupgrading : function(upgradeid = "",type = Number,basecost ,scaling) { // Type ID | 1 = Upgrades | 2 = Buyables | 3 = Upgrade Unlockers
+    tokensupgrading : function(upgradeid = "",order = Number,type = Number,basecost ,scaling,cap) { // Type ID | 1 = Upgrades | 2 = Buyables | 3 = Upgrade Unlockers // Order is the order of that type, example :the x1.6 sus buyable is order 1
         if ((type == 1) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
           tokenvars.tokensupgrades.boughtonce[tokenvars.tokensupgrades.boughtonce.length] = upgradeid
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
+          document.getElementsByClassName("TokenUpgradeButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
         }
         if ((type == 2) && (ExpantaNum.gte(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))) == true) {
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))
           tokenvars.tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokenvars.tokensupgrades.boughtmore[upgradeid],1)
+          if (ExpantaNum.gte(tokenvars.tokensupgrades.boughtmore[upgradeid],cap)) {
+          document.getElementsByClassName("TokenUpgradeButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
         }
         if ((type == 3) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
           tokenvars.tokensupgrades.upgradeunlocks[tokenvars.tokensupgrades.upgradeunlocks.length] = upgradeid
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
-        }
+          document.getElementsByClassName("TokenUnlockButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
+        }}
       },
      addtokens : function(buttonorder) {
         let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),5e15)
@@ -44,8 +48,9 @@ var tokenfuncs = {
         document.getElementById("tokensbutton3").style.display = "inline"
         document.getElementById("tokenstext1").style.display = "inline"
         document.getElementById("tokenstext2").style.display = "inline"
-        document.getElementsByClassName("buyablescosttext")[0].innerHTML = toDisplay(ExpantaNum.mul(100,ExpantaNum.pow(2,tokenvars.tokensupgrades.boughtmore["moresus1"])))
-        document.getElementsByClassName("buyablescosttext")[1].innerHTML = toDisplay(ExpantaNum.floor(ExpantaNum.mul(1000,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))))
+        document.getElementsByClassName("costtext")[0].innerHTML = toDisplay(ExpantaNum.mul(100,ExpantaNum.pow(2,tokenvars.tokensupgrades.boughtmore["moresus1"])))
+        document.getElementsByClassName("costtext")[1].innerHTML = toDisplay(ExpantaNum.floor(ExpantaNum.mul(1000,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))))
+        document.getElementsByClassName("costtext")[2].innerHTML = toDisplay(ExpantaNum.pow(10,10))
         document.getElementsByClassName("ShowTokensUpgradesPanel")[0].style.display = "inline"
       if (upgradepanelactive == "tokens") {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "inline"
@@ -71,7 +76,8 @@ var tokenfuncs = {
         }
     }},
     tokenboostsrefresh : function() {
-      tokentotalboosts.sus = ExpantaNum.pow(1.6,tokenvars.tokensupgrades.boughtmore.moresus1)
+      tokentotalboosts.sus = ExpantaNum.mul(ExpantaNum.pow(1.6,tokenvars.tokensupgrades.boughtmore.moresus1)
+      ,ExpantaNum.add(1,ExpantaNum.mul(booleanToNumber(tokenvars.tokensupgrades.boughtonce.includes("susboost1")),ExpantaNum.pow(ExpantaNum.logarithm(tokenvars.tokens,5),1.5))))
       tokentotalboosts.crewmate = ExpantaNum.pow(1.2,tokenvars.tokensupgrades.boughtmore.morecrewmate1)
     }
 }

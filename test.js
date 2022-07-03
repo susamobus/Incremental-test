@@ -171,3 +171,12 @@ function upgradepanel(feature) { //again, feature param MUST BE STRING
     upgradepanelactive = "none"
   }
 }
+function booleanToNumber(boolean) {
+    if (boolean == true) {
+        return 1
+    } else if (boolean == false) {
+        return 0
+    } else {
+        throw console.error("Error: you didn't provide a boolean to convert to number or you provided non-boolean");
+    }
+}
