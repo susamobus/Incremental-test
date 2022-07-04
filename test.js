@@ -180,3 +180,12 @@ function booleanToNumber(boolean) {
         throw console.error("Error: you didn't provide a boolean to convert to number or you provided non-boolean");
     }
 }
+function inverseBoolean(boolean) {
+    if (boolean == true) {
+        return false
+    } else if (boolean == false) {
+        return true
+    } else {
+        throw console.error("Error: you didn't provide a boolean to convert to opposite of itself or you provided non-boolean");
+    }
+}

@@ -43,4 +43,7 @@ Restart : function() {
   saveddata = {};
   localStorage.setItem("saveddata", JSON.stringify(saveddata))
   location.reload();
+},
+LoadButtons : function() { //INSERT REFRESH BUTTONS OF EVERY FEATURE HERE
+  tokenfuncs.tokenbuttonsrefresh
 }}

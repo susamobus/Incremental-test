@@ -48,7 +48,7 @@ toRoundedScientific : function(num) {
   },
   toEE : function(num) {
     if (ExpantaNum.gte(num,ExpantaNum.pow(10,ExpantaNum.pow(10,6))) && ExpantaNum.lt(num,ExpantaNum.pow(10,ExpantaNum.pow(10,1e6))) == true) {
-      return [notationfuncs.getMantissa(num),"ee",notationfuncs.getLogarithm(notationfuncs.getLogarithm(num,false),false)].join("")
+      return [1.00,"ee",notationfuncs.getLogarithm(notationfuncs.getLogarithm(num,false),false)].join("")
     }
   },
   getMantissa : function(num) {
