@@ -11,13 +11,13 @@ var tokenfuncs = {
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,ExpantaNum.mul(basecost,ExpantaNum.pow(scaling,tokenvars.tokensupgrades.boughtmore[upgradeid])))
           tokenvars.tokensupgrades.boughtmore[upgradeid] = ExpantaNum.add(tokenvars.tokensupgrades.boughtmore[upgradeid],1)
           if (ExpantaNum.gte(tokenvars.tokensupgrades.boughtmore[upgradeid],cap)) {
-          document.getElementsByClassName("TokenUpgradeButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
-        }
+          document.getElementsByClassName("TokenBuyableButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
+        }}
         if ((type == 3) && (ExpantaNum.gte(tokenvars.tokens,basecost))) {
           tokenvars.tokensupgrades.upgradeunlocks[tokenvars.tokensupgrades.upgradeunlocks.length] = upgradeid
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
           document.getElementsByClassName("TokenUnlockButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
-        }}
+        }
       },
      addtokens : function(buttonorder) {
         let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),5e15)
