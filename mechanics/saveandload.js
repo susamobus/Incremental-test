@@ -31,6 +31,7 @@ Load : function() {
     if (typeof saveddata.unlocked.unlocks !== "undefined") unlocks = saveddata.unlocked.unlocks;
     if (typeof saveddata.tokensfeature.tokens !== "undefined") tokenvars.tokens = saveddata.tokensfeature.tokens;
     if (typeof saveddata.tokensfeature.tokenupgrades !== "undefined") tokenvars.tokensupgrades = saveddata.tokensfeature.tokenupgrades;
+    saveandload.LoadButtons()
 },
 Restart : function() {
   sus = 0
@@ -45,5 +46,5 @@ Restart : function() {
   location.reload();
 },
 LoadButtons : function() { //INSERT REFRESH BUTTONS OF EVERY FEATURE HERE
-  tokenfuncs.tokenbuttonsrefresh
+  tokenfuncs.tokenbuttonsrefresh()
 }}
