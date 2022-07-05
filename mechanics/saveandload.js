@@ -47,4 +47,5 @@ Restart : function() {
 },
 LoadButtons : function() { //INSERT REFRESH BUTTONS OF EVERY FEATURE HERE
   tokenfuncs.tokenbuttonsrefresh()
+  tokenfuncs.tokenbuttonsload()
 }}

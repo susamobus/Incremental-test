@@ -60,26 +60,19 @@ var tokenfuncs = {
       if (upgradepanelactive == "tokens") {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "inline"
         document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"
-        document.getElementsByClassName("TokenBuyableButtons")[0].style.display = "inline"
         } else {
         document.getElementsByClassName("TokenUpgradesPanel")[0].style.display = "none" 
-        document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"
-        document.getElementsByClassName("TokenBuyableButtons")[0].style.display = "inline"  
+        document.getElementsByClassName("TokensPanelHeader")[0].style.display = "inline"  
         }
         if (tokenvars.tokensupgrades.boughtonce.includes("tokenpages")) {
           document.getElementsByClassName("TokenPageButtons")[0].style.display = "inline"
           document.getElementsByClassName("TokenPageButtons")[1].style.display = "inline"
           document.getElementsByClassName("TokenUpgradeButtons")[0].style.display = "none"
-        } else {
-          document.getElementsByClassName("TokenUpgradeButtons")[0].style.display = "inline"
-        }
-        if (tokenvars.tokensupgrades.upgradeunlocks.includes("unlock1")) {
-          document.getElementsByClassName("TokenBuyableButtons")[1].style.display = "inline"
-          document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "none"
-        } else {
-          document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "inline"
         }
     }},
+    tokenbuttonsload : function() {
+      document.getElementsByClassName("TokenBuyableButtons")[0].style.display = "inline"
+    },
     tokenboostsrefresh : function() {
       tokentotalboosts.sus = ExpantaNum.mul(ExpantaNum.pow(1.6,tokenvars.tokensupgrades.boughtmore.moresus1)
       ,ExpantaNum.add(1,ExpantaNum.mul(booleanToNumber(tokenvars.tokensupgrades.boughtonce.includes("susboost1")),ExpantaNum.pow(ExpantaNum.logarithm(ExpantaNum.add(tokenvars.tokens,1),5),1.5))))
@@ -101,5 +94,6 @@ var tokentotalboosts = {
 }
 
 window.setInterval(function() {
+  tokenfuncs.tokenbuttonsrefresh()
   tokenfuncs.tokenboostsrefresh()
 },50);
