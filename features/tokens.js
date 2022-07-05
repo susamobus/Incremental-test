@@ -72,6 +72,8 @@ var tokenfuncs = {
     }},
     tokenbuttonsload : function() {
       document.getElementsByClassName("TokenBuyableButtons")[0].style.display = "inline"
+      document.getElementsByClassName("TokenUpgradeButtons")[0].style.display = "inline"
+      document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "inline"
     },
     tokenboostsrefresh : function() {
       tokentotalboosts.sus = ExpantaNum.mul(ExpantaNum.pow(1.6,tokenvars.tokensupgrades.boughtmore.moresus1)
