@@ -19,6 +19,7 @@ var tokenfuncs = {
           document.getElementsByClassName("TokenUnlockButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
           if (tokenvars.tokensupgrades.upgradeunlocks.includes("unlock1")) {
             document.getElementsByClassName("TokenBuyableButtons")[1].style.display = "inline"
+            document.getElementsByClassName("TokenUpgradeButtons")[1].style.display = "inline"
             document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "none"
           }
         }
