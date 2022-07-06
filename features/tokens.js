@@ -17,7 +17,7 @@ var tokenfuncs = {
           tokenvars.tokensupgrades.upgradeunlocks[tokenvars.tokensupgrades.upgradeunlocks.length] = upgradeid
           tokenvars.tokens = ExpantaNum.sub(tokenvars.tokens,basecost)
           document.getElementsByClassName("TokenUnlockButtons")[ExpantaNum.sub(order,1).toNumber()].style.display = "none"
-          if (tokenvars.tokensupgrades.upgradeunlocks.includes("unlock1")) {
+          if (order == 1) {
             document.getElementsByClassName("TokenBuyableButtons")[1].style.display = "inline"
             document.getElementsByClassName("TokenUpgradeButtons")[1].style.display = "inline"
             document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "none"
