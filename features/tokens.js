@@ -53,8 +53,8 @@ var tokenfuncs = {
         document.getElementById("tokensbutton3").style.display = "inline"
         document.getElementById("tokenstext1").style.display = "inline"
         document.getElementById("tokenstext2").style.display = "inline"
-        document.getElementsByClassName("costtext")[0].innerHTML = toDisplay(ExpantaNum.mul(100,ExpantaNum.pow(2,tokenvars.tokensupgrades.boughtmore["moresus1"])))
-        document.getElementsByClassName("costtext")[1].innerHTML = toDisplay(ExpantaNum.floor(ExpantaNum.mul(1000,ExpantaNum.pow(3,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))))
+        document.getElementsByClassName("costtext")[0].innerHTML = toDisplay(ExpantaNum.floor(ExpantaNum.mul(100,ExpantaNum.pow(2.5,tokenvars.tokensupgrades.boughtmore["moresus1"]))))
+        document.getElementsByClassName("costtext")[1].innerHTML = toDisplay(ExpantaNum.floor(ExpantaNum.mul(1000,ExpantaNum.pow(8,tokenvars.tokensupgrades.boughtmore["morecrewmate1"]))))
         document.getElementsByClassName("costtext")[2].innerHTML = toDisplay(ExpantaNum.pow(10,11))
         document.getElementsByClassName("ShowTokensUpgradesPanel")[0].style.display = "inline"
       if (upgradepanelactive == "tokens") {
