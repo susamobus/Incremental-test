@@ -76,9 +76,9 @@ var tokenfuncs = {
       document.getElementsByClassName("TokenUnlockButtons")[0].style.display = "inline"
     },
     tokenboostsrefresh : function() {
-      tokentotalboosts.sus = ExpantaNum.mul(ExpantaNum.pow(1.6,tokenvars.tokensupgrades.boughtmore.moresus1)
+      tokentotalboosts.sus = ExpantaNum.mul(ExpantaNum.pow(1.4,tokenvars.tokensupgrades.boughtmore.moresus1)
       ,ExpantaNum.add(1,ExpantaNum.mul(booleanToNumber(tokenvars.tokensupgrades.boughtonce.includes("susboost1")),ExpantaNum.pow(ExpantaNum.logarithm(ExpantaNum.add(tokenvars.tokens,1),5),1.5))))
-      tokentotalboosts.crewmate = ExpantaNum.pow(1.2,tokenvars.tokensupgrades.boughtmore.morecrewmate1)
+      tokentotalboosts.crewmate = ExpantaNum.pow(1.1,tokenvars.tokensupgrades.boughtmore.morecrewmate1)
     }
 }
 
