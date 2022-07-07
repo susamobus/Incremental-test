@@ -61,9 +61,9 @@ window.setInterval(function() {
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
     crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(tokentotalboosts.crewmate,ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpantaNum.add(impostor,1))))
-    if (ExpantaNum.gte(ExpantaNum.add(impostor,impostorconvert)),50) {
-        impostorcost = ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.5,impostor),12.5),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10),2)
-        impostorconvert = ExpantaNum.floor(ExpantaNum.add(ExpantaNum.logarithm(ExpantaNum.div(crewmate,impostorcost),6),ExpantaNum.sub(50,impostor)))
+    if (ExpantaNum.gte(ExpantaNum.add(impostor,impostorconvert)),35) {
+        impostorcost = ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.5,impostor),12.5),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10),9)
+        impostorconvert = ExpantaNum.floor(destroyNumWithSign(ExpantaNum.add(ExpantaNum.logarithm(ExpantaNum.div(crewmate,ExpantaNum.root(impostorcost,9)),6),ExpantaNum.sub(35,impostor)),-1))
     } else {
         impostorcost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.5,impostor),12.5),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10)
         impostorconvert = ExpantaNum.floor(ExpantaNum.div(crewmate,impostorcost))
@@ -194,3 +194,26 @@ function inverseBoolean(boolean) {
         throw console.error("Error: you didn't provide a boolean to convert to opposite of itself or you provided non-boolean");
     }
 }
+function destroyNumWithSign(num,sign) {
+    if (sign == -1) {
+        if (num == ExpantaNum.negate(num)) {
+            return 0
+        } else if (num !== ExpantaNum.negate(num)) {
+            return num
+        } else {
+            throw console.error("Error: 1st parameter should be a number (ExpantaNum objects counts as numbers)")
+        }   
+    } else if (sign == 1) {
+        if (num == ExpantaNum.abs(num)) {
+            return 0
+        } else if (num !== ExpantaNum.abs(num)) {
+            return num
+        } else {
+            throw console.error("Error: 1st parameter should be a number (ExpantaNum objects counts as numbers)")
+        }   
+    } else {
+        throw console.error("Error: 2nd parameter is broken (should be either 1 or -1, or expantaNum counterparts of these)")
+    }
+    
+}
+  
