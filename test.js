@@ -61,7 +61,7 @@ window.setInterval(function() {
     amogusconvert = ExpantaNum.floor(ExpantaNum.mul(ExpantaNum.div(sus,amoguscost),ExpantaNum.add(crewmate,1)))
     crewmatecost = ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.add(crewmate,10),2),10)),10)
     crewmateconvert = ExpantaNum.floor(ExpantaNum.mul(tokentotalboosts.crewmate,ExpantaNum.mul(ExpantaNum.div(amogus,crewmatecost),ExpantaNum.add(impostor,1))))
-    if (ExpantaNum.gte(ExpantaNum.add(impostor,impostorconvert)),35) {
+    if (ExpantaNum.gte(ExpantaNum.add(impostor,impostorconvert),35)) {
         impostorcost = ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.round(ExpantaNum.div(ExpantaNum.pow(ExpantaNum.mul(ExpantaNum.add(ExpantaNum.mul(2.5,impostor),12.5),ExpantaNum.add(1,ExpantaNum.div(impostor,10))),2),10)),10),9)
         impostorconvert = ExpantaNum.floor(destroyNumWithSign(ExpantaNum.add(ExpantaNum.logarithm(ExpantaNum.div(crewmate,ExpantaNum.root(impostorcost,9)),6),ExpantaNum.sub(35,impostor)),-1))
     } else {
