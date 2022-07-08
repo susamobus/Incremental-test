@@ -196,7 +196,9 @@ function inverseBoolean(boolean) {
 }
 function destroyNumWithSign(num,sign) {
     if (sign == -1) {
-        if (num == ExpantaNum.negate(num)) {
+        if (ExpantaNum.eq(num,ExpantaNum.negate(num))) {
+            return 0
+        } else if (ExpantaNum.eq(num,ExpantaNum.NEGATIVE_INFINITY)) {
             return 0
         } else if (num !== ExpantaNum.negate(num)) {
             return num
@@ -205,6 +207,8 @@ function destroyNumWithSign(num,sign) {
         }   
     } else if (sign == 1) {
         if (num == ExpantaNum.abs(num)) {
+            return 0
+        } else if (ExpantaNum.eq(num,ExpantaNum.POSITIVE_INFINITY)) {
             return 0
         } else if (num !== ExpantaNum.abs(num)) {
             return num
