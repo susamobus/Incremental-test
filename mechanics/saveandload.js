@@ -27,7 +27,7 @@ Load : function() {
     if (typeof saveddata.mainlayers.crewmate !== "undefined") crewmate = saveddata.mainlayers.crewmate;
     if (typeof saveddata.mainlayers.impostor !== "undefined") impostor = saveddata.mainlayers.impostor;
     if (typeof saveddata.mainlayers.lifetimesus !== "undefined") lifetimesus = saveddata.mainlayers.lifetimesus;
-    if (typeof saveddata.featuresunlocked.unlocks !== "undefined") unlocks = saveddata.unlocked.unlocks;
+    if (typeof saveddata.featuresunlocked.unlocks !== "undefined") unlocks = saveddata.featuresunlocked.unlocks;
     if (typeof saveddata.tokensfeature !== "undefined") tokenvars = saveddata.tokensfeature.tokenvarssave;
     saveandload.LoadButtons()
 },
