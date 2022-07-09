@@ -203,7 +203,7 @@ function destroyNumWithSign(num,sign) {
         } else if (ExpantaNum.gt(num,ExpantaNum.negate(num))) {
             return num
         } else {
-            throw console.error("Error: 1st parameter should be a number (ExpantaNum objects counts as numbers)")
+            throw console.error(["Error: 1st parameter should be a number (ExpantaNum objects counts as numbers) || Num Parameter:",num].join(""))
         }   
     } else if (sign == 1) {
         if (ExpantaNum.eq(num,ExpantaNum.abs(num))) {
