@@ -12,8 +12,7 @@ Save : function() {
         lifetimesus: lifetimesus,
         },
      tokensfeature : {
-        tokens: tokenvars.tokens,
-        tokenupgrades : tokenvars.upgrades
+        tokenvarssave: tokenvars
         },
       unlocked : {
         unlocks: unlocks
@@ -29,8 +28,7 @@ Load : function() {
     if (typeof saveddata.mainlayers.impostor !== "undefined") impostor = saveddata.mainlayers.impostor;
     if (typeof saveddata.mainlayers.lifetimesus !== "undefined") lifetimesus = saveddata.mainlayers.lifetimesus;
     if (typeof saveddata.unlocked.unlocks !== "undefined") unlocks = saveddata.unlocked.unlocks;
-    if (typeof saveddata.tokensfeature.tokens !== "undefined") tokenvars.tokens = saveddata.tokensfeature.tokens;
-    if (typeof saveddata.tokensfeature.tokenupgrades !== "undefined") tokenvars.tokensupgrades = saveddata.tokensfeature.tokenupgrades;
+    if (typeof saveddata.tokensfeature !== "undefined") tokenvars = saveddata.tokensfeature.tokenvarssave;
     saveandload.LoadButtons()
 },
 Restart : function() {
