@@ -196,21 +196,17 @@ function inverseBoolean(boolean) {
 }
 function destroyNumWithSign(num,sign) {
     if (sign == -1) {
-        if (ExpantaNum.eq(num,ExpantaNum.negate(num))) {
+        if (ExpantaNum.isneg(num)) {
             return 0
-        } else if (ExpantaNum.eq(num,ExpantaNum.NEGATIVE_INFINITY)) {
-            return 0
-        } else if (ExpantaNum.gt(num,ExpantaNum.negate(num))) {
+        } else if (ExpantaNum.isneg(num)) {
             return num
         } else {
             throw console.error(["Error: 1st parameter should be a number (ExpantaNum objects counts as numbers) || Num Parameter:",num].join(""))
         }   
     } else if (sign == 1) {
-        if (ExpantaNum.eq(num,ExpantaNum.abs(num))) {
+        if (ExpantaNum.ispos(num)) {
             return 0
-        } else if (ExpantaNum.eq(num,ExpantaNum.POSITIVE_INFINITY)) {
-            return 0
-        } else if (ExpantaNum.lt(num,ExpantaNum.abs(num))) {
+        } else if (ExpantaNum.isneg(num)) {
             return num
         } else {
             throw console.error("Error: 1st parameter should be a number (ExpantaNum objects counts as numbers)")
