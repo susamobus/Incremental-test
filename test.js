@@ -198,13 +198,13 @@ function destroyNumWithSign(num,sign) {
     if (sign == -1) {
         if (ExpantaNum.isneg(num)) {
             return 0
-        } else if (ExpantaNum.ispos(num)) {
+        } else if (ExpantaNum.ispos(num)||ExpantaNum.eq(num,ExpantaNum.ZERO)) {
             return num
         } else {
             throw console.error(["Error: 1st parameter should be a number (ExpantaNum objects counts as numbers) || Num Parameter:",num].join(""))
         }   
     } else if (sign == 1) {
-        if (ExpantaNum.ispos(num)) {
+        if (ExpantaNum.ispos(num)||ExpantaNum.eq(num,ExpantaNum.ZERO)) {
             return 0
         } else if (ExpantaNum.isneg(num)) {
             return num

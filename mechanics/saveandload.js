@@ -38,7 +38,6 @@ Restart : function() {
   impostor = 0
   liftimesus = 0
   tokenvars.tokens = 0
-  token
   saveddata = {};
   localStorage.setItem("saveddata", JSON.stringify(saveddata))
   location.reload();
