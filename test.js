@@ -38,7 +38,7 @@ window.setInterval(function() {
  },49);
 window.setInterval(function() {
     displayedsus = toDisplay(sus)
-    document.getElementById("displayedsus").innerHTML = displayedsus
+    document.getElementById("displayedsus").innerHTML = [displayedsus,", Per Tick:" ,toDisplay(susgainpertick)].join("")
     if (notation == 1) {
         document.getElementById("notation").innerHTML = "Suffixes"
         document.getElementById("notation").style.color = "royalblue"
@@ -69,22 +69,22 @@ window.setInterval(function() {
         impostorconvert = ExpantaNum.floor(ExpantaNum.div(crewmate,impostorcost))
     }
     if (mode == 0) {
-    document.getElementById("amoguscost").innerHTML = amoguscost
+    document.getElementById("amoguscost").innerHTML = toDisplay(amoguscost)
     document.getElementById("amogusamount").innerHTML = "1"
-    document.getElementById("crewmatecost").innerHTML = crewmatecost
+    document.getElementById("crewmatecost").innerHTML = toDisplay(crewmatecost)
     document.getElementById("crewmateamount").innerHTML = "1"
-    document.getElementById("impostorcost").innerHTML = impostorcost
+    document.getElementById("impostorcost").innerHTML = toDisplay(impostorcost)
     document.getElementById("impostoramount").innerHTML = "1"
     document.getElementById("mode").innerHTML = "Buy singles"
     document.getElementById("mode").style.color = "greenyellow"
     }
     if (mode == 1) {
         document.getElementById("amoguscost").innerHTML = "All"
-        document.getElementById("amogusamount").innerHTML = amogusconvert
+        document.getElementById("amogusamount").innerHTML = toDisplay(amogusconvert)
         document.getElementById("crewmatecost").innerHTML = "1 crewmate when converted"
-        document.getElementById("crewmateamount").innerHTML = crewmateconvert
+        document.getElementById("crewmateamount").innerHTML = toDisplay(crewmateconvert)
         document.getElementById("impostorcost").innerHTML = "1 impostor when converted"
-        document.getElementById("impostoramount").innerHTML = impostorconvert
+        document.getElementById("impostoramount").innerHTML = toDisplay(impostorconvert)
         document.getElementById("mode").innerHTML = "Buy max"
         document.getElementById("mode").style.color = "lightskyblue"
     }
