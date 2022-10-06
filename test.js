@@ -38,7 +38,7 @@ window.setInterval(function() {
  },49);
 window.setInterval(function() {
     displayedsus = toDisplay(sus)
-    document.getElementById("displayedsus").innerHTML = [displayedsus,", Per Tick:" ,toDisplay(susgainpertick)].join("")
+    document.getElementById("displayedsus").innerHTML = displayedsus
     if (notation == 1) {
         document.getElementById("notation").innerHTML = "Suffixes"
         document.getElementById("notation").style.color = "royalblue"
@@ -47,9 +47,9 @@ window.setInterval(function() {
         document.getElementById("notation").style.color = "lightsteelblue"
     }
     
-    document.getElementById("amogus").innerHTML = amogus
-    document.getElementById("crewmate").innerHTML = crewmate
-    document.getElementById("impostor").innerHTML = impostor
+    document.getElementById("amogus").innerHTML = toDisplay(amogus)
+    document.getElementById("crewmate").innerHTML = toDisplay(crewmate)
+    document.getElementById("impostor").innerHTML = toDisplay(impostor)
     document.getElementById("tokenstext2").innerHTML = toDisplay(tokenvars.tokens)
     document.getElementById("tokensgain1").innerHTML = toDisplay(tokenfuncs.getTokensGain(1))
     document.getElementById("tokensgain2").innerHTML = toDisplay(tokenfuncs.getTokensGain(2))
